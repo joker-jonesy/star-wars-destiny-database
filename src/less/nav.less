@@ -1,0 +1,147 @@
+nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: @fontColor;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px;
+  z-index: 99;
+
+  .logo {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  img {
+    height: 90%;
+  }
+
+  .ham {
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:hover {
+      font-size: 24px;
+      color: @background;
+    }
+
+
+  }
+
+
+}
+
+.options {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  background-color: @menubackground;
+  width: 100%;
+  transition: 0.25s;
+  box-sizing: border-box;
+  padding-top: 80px;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 600px) {
+    width: 400px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  h1 {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 8px;
+    border-bottom: 3px solid white;
+  }
+
+
+  h3 {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 8px;
+    border-bottom: 3px solid white;
+
+    svg {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  }
+
+  .listOpt {
+    list-style: none;
+    overflow: hidden;
+    transition: 0.15s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 3px solid white;
+
+    &:last-child{
+      border-bottom: none;
+      .item{
+        &:last-child{
+          border-bottom: 2px solid @fontColor;
+        }
+      }
+    }
+
+    .item {
+      transition: 0.15s;
+      height: 25px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 8px;
+      width: 100%;
+      border-bottom: 2px solid @fontColor;
+
+      &:last-child{
+        border-bottom: none;
+      }
+
+      .active {
+        height: 18px;
+        width: 18px;
+        border-radius: 18px;
+        background-color: black;
+      }
+    }
+  }
+}

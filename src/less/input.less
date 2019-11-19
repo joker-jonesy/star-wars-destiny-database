@@ -1,0 +1,35 @@
+.button {
+  min-width: 100px;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 8px;
+  color: white;
+  background-color: @sideBackground;
+  transition: 0.25s;
+
+  &:hover {
+    font-weight: bold;
+    font-size: large;
+  }
+}
+
+.search {
+  height: 40px;
+  width: 45%;
+
+  outline: none;
+  border: solid 3px @background;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 21px;
+
+  @media screen and (min-width: 700px) {
+    width: 500px;
+  }
+}

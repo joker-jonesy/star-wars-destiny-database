@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+}
+
+html,body{
+  width: 100%;
+}
+
+html{
+  background-color: @background;
+  color:@fontColor;
+}
+
+.App {
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.mainWrapper{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 8px;
+  position: relative;
+  min-height: 100%;
+}
+
+.cardPageWrapper{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(40, 44, 52, 0.97);
+  z-index: 100;
+  color: white;
+}
+

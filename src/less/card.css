@@ -1,0 +1,14 @@
+.card {
+  margin: 8px;
+  min-width: 298px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.card h1 {
+  margin-bottom: 8px;
+}
+/*# sourceMappingURL=card.css.map */

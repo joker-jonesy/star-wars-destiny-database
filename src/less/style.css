@@ -1,0 +1,252 @@
+nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #343740;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px;
+  z-index: 99;
+}
+nav .logo {
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+nav img {
+  height: 90%;
+}
+nav .ham {
+  height: 100%;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s;
+}
+nav .ham:hover {
+  font-size: 24px;
+  color: #ededed;
+}
+.options {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  background-color: #8f8f8f;
+  width: 100%;
+  transition: 0.25s;
+  box-sizing: border-box;
+  padding-top: 80px;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 600px) {
+  .options {
+    width: 400px;
+  }
+}
+.options .wrapper {
+  width: 100%;
+}
+.options h1 {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 8px;
+  border-bottom: 3px solid white;
+}
+.options h3 {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 8px;
+  border-bottom: 3px solid white;
+}
+.options h3 svg {
+  font-size: 16px;
+  margin-left: 10px;
+}
+.options .listOpt {
+  list-style: none;
+  overflow: hidden;
+  transition: 0.15s;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 3px solid white;
+}
+.options .listOpt:last-child {
+  border-bottom: none;
+}
+.options .listOpt:last-child .item:last-child {
+  border-bottom: 2px solid #343740;
+}
+.options .listOpt .item {
+  transition: 0.15s;
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 100%;
+  border-bottom: 2px solid #343740;
+}
+.options .listOpt .item:last-child {
+  border-bottom: none;
+}
+.options .listOpt .item .active {
+  height: 18px;
+  width: 18px;
+  border-radius: 18px;
+  background-color: black;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+}
+html {
+  background-color: #ededed;
+  color: #343740;
+}
+.App {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.mainWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 8px;
+  position: relative;
+  min-height: 100%;
+}
+.cardPageWrapper {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(40, 44, 52, 0.97);
+  z-index: 100;
+  color: white;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1830px;
+}
+.list .wrapper {
+  max-width: 1830px;
+  box-sizing: border-box;
+  padding: 85px 8px 8px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.card {
+  margin: 8px;
+  min-width: 298px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  color: #343740;
+  transition: 0.25s;
+}
+.card:hover {
+  color: black;
+}
+.card .cardWrapper {
+  min-height: 298px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card h1 {
+  margin-bottom: 8px;
+}
+.button {
+  min-width: 100px;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  transition: 0.25s;
+}
+.button:hover {
+  font-weight: bold;
+  font-size: large;
+}
+.search {
+  height: 40px;
+  width: 45%;
+  outline: none;
+  border: solid 3px #ededed;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 21px;
+}
+@media screen and (min-width: 700px) {
+  .search {
+    width: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
