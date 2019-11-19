@@ -3,6 +3,7 @@ import {useHistory,
     useParams
 } from "react-router-dom";
 import Card from './Card';
+import CardInfo from './CardInfo';
 
 function CardPage(){
 
@@ -35,6 +36,8 @@ function CardPage(){
     };
 
     let { id } = useParams();
+    console.log(id);
+
 
     React.useEffect(()=>{
 
@@ -69,6 +72,7 @@ function CardPage(){
     return (
         <div className={id ? "cardPageWrapper" : undefined} onClick={back}>
             <Card  name={card.name} imagesrc={card.imagesrc} code={card.code} loadColor={"white"}/>
+            <CardInfo crd={card}/>
         </div>
     )
 }

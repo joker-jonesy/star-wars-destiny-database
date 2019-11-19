@@ -41,7 +41,7 @@ html{
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-top: 85px;
@@ -52,6 +52,12 @@ html{
   background-color: rgba(40, 44, 52, 0.97);
   z-index: 100;
   color: white;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 500px){
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
   .card{
     color: white;
@@ -62,6 +68,34 @@ html{
     &:hover{
       color: white;
     }
+  }
+
+  .cardInfo{
+    min-height: 100px;
+    background-color: white;
+    width: 100%;
+    color: @fontColor;
+    box-sizing: border-box;
+    padding: 8px;
+
+    @media screen and (min-width: 500px){
+      width: 400px;
+    }
+
+    .subtypes{
+      display: flex;
+    }
+
+    .sides{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .side{
+
+      }
+    }
+
   }
 }
 

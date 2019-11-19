@@ -21,7 +21,6 @@ function List(props) {
                 return response.json();
             })
             .then((data) => {
-                console.log(data);
                 setLoad(false);
                 handleStatusChange(data);
             }).catch(function () {
