@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/star-wars-destiny-database/static/css/main.ca960cd6.chunk.css",
-    "main.js": "/star-wars-destiny-database/static/js/main.24d0736c.chunk.js",
-    "main.js.map": "/star-wars-destiny-database/static/js/main.24d0736c.chunk.js.map",
+    "main.js": "/star-wars-destiny-database/static/js/main.8d9c374d.chunk.js",
+    "main.js.map": "/star-wars-destiny-database/static/js/main.8d9c374d.chunk.js.map",
     "runtime-main.js": "/star-wars-destiny-database/static/js/runtime-main.d63828c1.js",
     "runtime-main.js.map": "/star-wars-destiny-database/static/js/runtime-main.d63828c1.js.map",
     "static/js/2.501f2758.chunk.js": "/star-wars-destiny-database/static/js/2.501f2758.chunk.js",
     "static/js/2.501f2758.chunk.js.map": "/star-wars-destiny-database/static/js/2.501f2758.chunk.js.map",
     "index.html": "/star-wars-destiny-database/index.html",
-    "precache-manifest.fc1fefb4acf38f5dfd77a5759d454197.js": "/star-wars-destiny-database/precache-manifest.fc1fefb4acf38f5dfd77a5759d454197.js",
+    "precache-manifest.87db3065d4a33c8e90ff5af4eccd0b46.js": "/star-wars-destiny-database/precache-manifest.87db3065d4a33c8e90ff5af4eccd0b46.js",
     "service-worker.js": "/star-wars-destiny-database/service-worker.js",
     "static/css/main.ca960cd6.chunk.css.map": "/star-wars-destiny-database/static/css/main.ca960cd6.chunk.css.map",
     "static/media/logo.png": "/star-wars-destiny-database/static/media/logo.faa1ee06.png",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.d63828c1.js",
     "static/js/2.501f2758.chunk.js",
     "static/css/main.ca960cd6.chunk.css",
-    "static/js/main.24d0736c.chunk.js"
+    "static/js/main.8d9c374d.chunk.js"
   ]
 }
