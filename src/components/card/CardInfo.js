@@ -2,24 +2,27 @@ import React from 'react';
 
 function CardInfo(props){
 
-    const [rst, setRst] = React.useState({
+    const [rst, setRst] = React.useState([
 
-        trilogy:{
-            restricted:false,
-            balance:"",
+       {
+           format:"trilogy",
+           restricted:false,
+            balance:"--",
             legal:false
         },
-        standard:{
+        {
+            format:"standard",
             restricted:false,
-            balance:"",
+            balance:"--",
             legal:false
         },
-        infinite:{
+        {
+            format:"infinite",
             restricted:false,
-            balance:"",
+            balance:"--",
             legal:true
         }
-    });
+    ]);
     const [load, setLoad]= React.useState(false);
 
 
@@ -40,33 +43,72 @@ function CardInfo(props){
 
     React.useEffect(()=>{
 
+        const abortController = new AbortController();
+        const signal  =abortController.signal;
+
 
         function handleStatusChange(status) {
-
+            setRst(status);
         }
 
         const unsubscribe = ()=>{
 
-
-            fetch("https://swdestinydb.com/api/public/formats/")
+            fetch("https://swdestinydb.com/api/public/formats/", {signal:signal})
                 .then(response => {
                     return response.json();
                 })
                 .then((data) => {
+                    let formats=[];
 
-                    let cardMain = data.filter(crd=>{
+                     data.map((fm)=>{
+
+                        let format ={
+                            name:fm.name,
+                            restricted:false,
+                            balance:"--",
+                            legal:false
+                        };
+
+                        if(props.code in fm.data.balance){
+                            format.balance = fm.data.balance[props.code];
+                        }
+
+                        if(fm.data.restricted.includes(props.code)){
+                            format.restricted=true;
+                        }
+
+                        if(fm.data.sets.includes(props.crd.set_code)){
+                            format.legal=true;
+                        }
+
+
+                        formats.push(format);
+
+
 
                     });
 
-                    handleStatusChange(cardMain[0]);
-                })
+                    handleStatusChange(formats);
+                }).catch(()=> console.log())
         };
 
         unsubscribe();
 
 
-        return ()=>unsubscribe();
+        return function cleanup(){
+            unsubscribe();
+            abortController.abort();
+        };
     },[]);
+
+    let formats = rst.map((fm, idx)=>
+    <div key={idx}>
+        <h1>{fm.name}</h1>
+        <h3>{fm.restricted ? "Restricted":null}</h3>
+        <h3>{fm.balance}</h3>
+        <h6>Legal: {fm.legal ? "Playable":"Unplayable"}</h6>
+    </div>
+    );
 
 
     return(
@@ -79,6 +121,7 @@ function CardInfo(props){
             <div className={"subtypes"}>{subtypes}</div>
             <div className={"sides"}>{sides}</div>
             <h3>{props.crd.has_errata&&"This card has an errata"}</h3>
+            {formats}
             <p>{props.crd.text}</p>
 
             <i>{props.crd.flavor}</i>

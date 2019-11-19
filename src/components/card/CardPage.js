@@ -47,10 +47,12 @@ function CardPage(props){
 
     },[props.match.params.id]);
 
+    const code = card.code;
+
     return (
         <Link className={props.match.params.id ? "cardPageWrapper" : undefined} to={"/"}>
             <Card  name={card.name} imagesrc={card.imagesrc} code={card.code} loadColor={"white"}/>
-            <CardInfo crd={card}/>
+            {code&&<CardInfo crd={card} code={code}/>}
         </Link>
     )
 }
