@@ -7,7 +7,7 @@ function returnSets(){
         })
         .then((data) => {
             data.map((itm)=>{
-                sets.push(itm.name);
+                return sets.push(itm.name);
             });
             return sets;
 

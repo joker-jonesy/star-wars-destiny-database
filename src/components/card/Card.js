@@ -1,8 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSpinner, faExclamationCircle} from '@fortawesome/free-solid-svg-icons';
-import { useLocation } from "react-router-dom";
 function Card(props) {
 
     const [load, updateLoading] = React.useState("loading");
@@ -52,7 +50,7 @@ function Card(props) {
             }, 1000);
 
         return () => clearInterval(interval);
-    }, [seconds]);
+    }, [seconds, load, props.imagesrc]);
 
     const handleImageLoad = () => {
         updateLoading(true)
@@ -62,10 +60,8 @@ function Card(props) {
         updateLoading(false)
     };
 
-    let location = useLocation();
-
     return (
-        <Link className={"card"} to={{pathname:"/" + props.code, state:{background:location}}}>
+        <div className={"card"} >
             <h1>{props.name}</h1>
             <div className={"cardWrapper"}>
                 {rend.img && <img alt={props.name} onLoad={handleImageLoad} onError={handleImageError} src={props.imagesrc}/>}
@@ -76,7 +72,7 @@ function Card(props) {
             </div>
 
 
-        </Link>
+        </div>
     )
 }
 

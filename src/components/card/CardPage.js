@@ -1,45 +1,19 @@
 import React from 'react';
-import {useHistory,
-    useParams
+import {
+     Link
 } from "react-router-dom";
 import Card from './Card';
 import CardInfo from './CardInfo';
 
-function CardPage(){
+function CardPage(props){
 
     const [card,setCard] = React.useState("");
-    const [load, updateLoading] = React.useState("loading");
-
-    let history = useHistory();
-
-    let back = e => {
-        e.stopPropagation();
-        history.goBack();
-    };
-
-    const handleImageLoad = ()=>{
-        updateLoading("loaded")
-    };
-
-    const handleImageError = ()=>{
-        updateLoading("error")
-    };
-
-    let loadDisplay =()=>{
-        if(load==="loading"){
-            return "Loading Image..."
-        }else if(load==="error"){
-            return "Image Error";
-        }else{
-            return ""
-        }
-    };
-
-    let { id } = useParams();
-    console.log(id);
 
 
     React.useEffect(()=>{
+
+        const abortController = new AbortController();
+        const signal  =abortController.signal;
 
 
         function handleStatusChange(status) {
@@ -49,31 +23,35 @@ function CardPage(){
         const unsubscribe = ()=>{
 
 
-            fetch("https://swdestinydb.com/api/public/cards/")
+            fetch("https://swdestinydb.com/api/public/cards/", {signal:signal})
                 .then(response => {
                     return response.json();
                 })
                 .then((data) => {
 
                     let cardMain = data.filter(crd=>{
-                        return id===crd.code;
+                        return props.match.params.id===crd.code;
                     });
 
                     handleStatusChange(cardMain[0]);
-                })
+                }).catch(ex=> console.log())
         };
 
         unsubscribe();
 
 
-        return ()=>unsubscribe();
-    },[id]);
+        return function cleanup(){
+            unsubscribe();
+            abortController.abort();
+        };
+
+    },[props.match.params.id]);
 
     return (
-        <div className={id ? "cardPageWrapper" : undefined} onClick={back}>
+        <Link className={props.match.params.id ? "cardPageWrapper" : undefined} to={"/"}>
             <Card  name={card.name} imagesrc={card.imagesrc} code={card.code} loadColor={"white"}/>
             <CardInfo crd={card}/>
-        </div>
+        </Link>
     )
 }
 

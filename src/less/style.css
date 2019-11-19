@@ -292,6 +292,9 @@ html {
   position: relative;
   min-height: 100%;
 }
+.wrapper a {
+  text-decoration: none;
+}
 .cardPageWrapper {
   width: 100%;
   box-sizing: border-box;
@@ -302,6 +305,7 @@ html {
   flex-direction: column;
   padding-top: 85px;
   position: fixed;
+  text-decoration: none;
   top: 0;
   left: 0;
   height: 100%;
@@ -318,6 +322,7 @@ html {
 }
 .cardPageWrapper .card {
   color: white;
+  pointer-events: none;
 }
 .cardPageWrapper .card svg {
   color: white;
@@ -373,6 +378,12 @@ html {
   position: relative;
   color: #343740;
   transition: 0.25s;
+}
+.card h1 {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card:hover {
   color: black;

@@ -36,6 +36,12 @@ html{
   min-height: 100%;
 }
 
+.wrapper{
+  a{
+    text-decoration: none;
+  }
+}
+
 .cardPageWrapper{
   width: 100%;
   box-sizing: border-box;
@@ -46,6 +52,7 @@ html{
   flex-direction: column;
   padding-top: 85px;
   position: fixed;
+  text-decoration: none;
   top: 0;
   left: 0;
   height: 100%;
@@ -54,6 +61,7 @@ html{
   color: white;
   overflow-y: scroll;
 
+
   @media screen and (min-width: 500px){
     flex-direction: row;
     justify-content: space-around;
@@ -61,6 +69,7 @@ html{
 
   .card{
     color: white;
+    pointer-events: none;
     svg{
       color: white;
     }

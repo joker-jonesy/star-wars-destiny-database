@@ -3,6 +3,7 @@ import {changeLimit} from "../../redux/actions/setActions";
 import Card from '../card/Card';
 import {connect} from 'react-redux';
 import Button from '../input/Button';
+import {Link} from 'react-router-dom';
 
 function List(props) {
 
@@ -24,8 +25,8 @@ function List(props) {
                 setLoad(false);
                 handleStatusChange(data);
             }).catch(function () {
-                setError(true);
-            })
+            setError(true);
+        })
 
     }, [cards, load]);
 
@@ -39,13 +40,7 @@ function List(props) {
 
                 if (props.sorted.points.toggle) {
                     sortedList = sortedList.filter(crd => {
-                        console.log(crd, props.sorted[p].val);
-
-                        if (crd.points != null) {
-                            return crd.points.includes(props.sorted[p].val)
-                        } else {
-                            return;
-                        }
+                        return crd.points.includes(props.sorted[p].val) && crd.points != null
                     });
 
                 } else {
@@ -85,13 +80,14 @@ function List(props) {
         cardEle = sortObject().slice(0, props.itemLimit).map((crd, idx) =>
 
 
-            <Card key={idx} name={crd.name} imagesrc={crd.imagesrc} code={crd.code} loadColor={"#343740"}/>
+            <Link to={"/" + crd.code} key={idx}><Card name={crd.name} imagesrc={crd.imagesrc} code={crd.code}
+                                                      loadColor={"#343740"}/></Link>
         );
-    } else if(!load&&!error) {
+    } else if (!load && !error) {
         cardEle = <h1>No cards in search</h1>;
-    }else if(load&&!error){
+    } else if (load && !error) {
         cardEle = <h1>Fetching Cards...</h1>;
-    }else if(load&&error){
+    } else if (load && error) {
         cardEle = <h1>Loading Cards failed. Refresh page...</h1>;
     }
 
