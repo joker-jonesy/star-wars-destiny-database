@@ -85,7 +85,7 @@ function List(props) {
         cardEle = sortObject().slice(0, props.itemLimit).map((crd, idx) =>
 
 
-            <Card key={idx} name={crd.name} imagesrc={crd.imagesrc} code={crd.code}/>
+            <Card key={idx} name={crd.name} imagesrc={crd.imagesrc} code={crd.code} loadColor={"#343740"}/>
         );
     } else if(!load&&!error) {
         cardEle = <h1>No cards in search</h1>;

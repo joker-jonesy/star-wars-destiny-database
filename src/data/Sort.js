@@ -1,3 +1,23 @@
+function returnSets(){
+    let sets=[];
+
+    fetch("https://swdestinydb.com/api/public/sets/")
+        .then(response => {
+            return response.json();
+        })
+        .then((data) => {
+            data.map((itm)=>{
+                sets.push(itm.name);
+            });
+            return sets;
+
+        }).catch(function () {
+        console.log("error loading sets");
+    });
+
+    return sets;
+}
+
 export const Sort = [
 
     {
@@ -28,9 +48,7 @@ export const Sort = [
     {
         name:"Set",
         type:"set_name",
-        values:["Awakenings","Spirit of Rebellion","Empire at War", "Two-Player Game","Legacies", "Rivals","Way of" +
-        " the Force","Across the Galaxy","Convergence", "Allies of Necessity", "Spark of Hope", "Covert Missions"]
-    },
+        values:returnSets()},
     {
         name:"Points",
         type:"points",

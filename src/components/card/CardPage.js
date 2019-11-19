@@ -2,6 +2,7 @@ import React from 'react';
 import {useHistory,
     useParams
 } from "react-router-dom";
+import Card from './Card';
 
 function CardPage(){
 
@@ -67,9 +68,7 @@ function CardPage(){
 
     return (
         <div className={id ? "cardPageWrapper" : undefined} onClick={back}>
-            <h1>{card.name}</h1>
-            <img alt={"card"+card.name} onLoad={handleImageLoad} onError={handleImageError} src={card.imagesrc}/>
-            <div>{loadDisplay}</div>
+            <Card  name={card.name} imagesrc={card.imagesrc} code={card.code} loadColor={"white"}/>
         </div>
     )
 }

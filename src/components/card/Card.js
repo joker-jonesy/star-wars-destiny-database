@@ -70,7 +70,7 @@ function Card(props) {
             <div className={"cardWrapper"}>
                 {rend.img && <img alt={props.name} onLoad={handleImageLoad} onError={handleImageError} src={props.imagesrc}/>}
                 <div>
-                    {rend.load&&<FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:"#343740"}}/>}
+                    {rend.load&&<FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.loadColor}}/>}
                     {rend.error&&<FontAwesomeIcon icon={faExclamationCircle} style={{color:"red"}} size={"6x"}/>}
                 </div>
             </div>

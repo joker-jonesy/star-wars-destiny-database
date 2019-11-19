@@ -1,7 +1,9 @@
 import React from 'react';
+import {clearOptions} from "../../redux/actions/setActions";
 import {connect} from 'react-redux';
 import Option from './Option';
 import {Sort} from "../../data/Sort";
+import Button from '../input/Button';
 
 function Options(props){
 
@@ -28,6 +30,7 @@ function Options(props){
             <div className={"wrapper"}>
                 {options}
             </div>
+            <Button handleClick={() => props.clearOptions()} text={"Clear Search Query"}/>
         </div>
     )
 }
@@ -38,6 +41,15 @@ const mapStateToProps = (state) => {
     }
 };
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+        clearOptions:()=>{
+            dispatch(clearOptions())
+        }
+    }
+};
 
 
-export default connect(mapStateToProps)(Options);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Options);

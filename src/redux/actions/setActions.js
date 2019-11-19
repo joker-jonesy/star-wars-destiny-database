@@ -4,12 +4,6 @@ export const changeLimit = () => {
     }
 };
 
-export const resetLimit = () => {
-    return {
-        type: 'RESET_LIMIT'
-    }
-};
-
 export const setName = (name) => {
     return {
         type: 'SET_NAME',
@@ -29,5 +23,11 @@ export const setSort = (prop, toggle, val) => {
 export const toggleOptions = () => {
     return {
         type: 'TOGGLE_OPTIONS'
+    }
+};
+
+export const clearOptions = () =>{
+    return {
+        type: 'CLEAR_OPTIONS'
     }
 };
