@@ -26,9 +26,9 @@ function App() {
                 <Options/>
                 <div className={"mainWrapper"}>
                 <Switch location={background || location}>
-                    <Route path={"/"} exact children={<List/>}/>
-
+                    <Route exact path="/" component={List}/>
                 </Switch>
+
                     {background && <Route path={"/:id"} children={<CardPage/>}/>}
                 </div>
             </div>
