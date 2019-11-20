@@ -7,26 +7,40 @@ import Options from './components/nav/options';
 
 import {
     Switch,
-    Route,
+    Route, matchPath, useLocation
 } from "react-router-dom";
 
 function App() {
 
+    let location = useLocation();
 
 
+    let fixer;
+
+    if (location.pathname!=="/") {
+        fixer = {
+            position: "fixed"
+        };
+
+    } else {
+        fixer = {
+            overflow: "visible"
+        }
+    }
 
     return (
 
         <div className="App">
             <Nav/>
             <Options/>
-            <div className={"mainWrapper"}>
+            <div className={"mainWrapper"} style={fixer}>
                 <Switch>
                     <Route path="/" component={List}/>
                 </Switch>
 
-                <Route path={"/:id"} component={CardPage}/>
+
             </div>
+            <Route path={"/:id"} component={CardPage}/>
         </div>
     );
 }
