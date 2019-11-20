@@ -344,10 +344,34 @@ html {
   display: flex;
   min-height: 10px;
 }
+.cardPageWrapper .cardInfo .cost {
+  display: flex;
+  align-items: center;
+}
+.cardPageWrapper .cardInfo .cost span {
+  margin: 5px;
+}
+.cardPageWrapper .cardInfo .formats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 8px;
+}
+.cardPageWrapper .cardInfo .formats .format {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 8px;
+}
 .cardPageWrapper .cardInfo .sides {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 8px;
 }
 .cardPageWrapper .cardInfo .sides .side {
   min-height: 25px;
@@ -357,7 +381,6 @@ html {
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 4px;
   border: solid 1px black;
   border-radius: 8px;
   overflow: hidden;
@@ -367,6 +390,11 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
+}
+.cardPageWrapper .cardInfo .sides .modify {
+  background-color: blue;
+  color: white;
 }
 .cardPageWrapper .cardInfo .sides .res {
   color: gold;
@@ -376,6 +404,9 @@ html {
   align-items: center;
   width: 100%;
 }
+.cardPageWrapper .cardInfo .sides .res * {
+  margin: 2px;
+}
 .cardPageWrapper .cardInfo .sides .blank {
   background-color: red;
   color: white;
@@ -384,6 +415,56 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.cardPageWrapper .cardInfo .text {
+  width: 100%;
+}
+.cardPageWrapper .cardInfo .text * {
+  margin: 8px;
+}
+.cardPageWrapper .cardInfo .text .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cardPageWrapper .cardInfo .text .affl {
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardPageWrapper .cardInfo .text .rr {
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardPageWrapper .cardInfo .text .Starter {
+  background-color: gray;
+}
+.cardPageWrapper .cardInfo .text .Common {
+  background-color: lightskyblue;
+}
+.cardPageWrapper .cardInfo .text .Uncommon {
+  background-color: yellow;
+}
+.cardPageWrapper .cardInfo .text .Rare {
+  background-color: greenyellow;
+}
+.cardPageWrapper .cardInfo .text .Legendary {
+  background-color: plum;
+}
+.cardPageWrapper .cardInfo .text .Villain {
+  color: white;
+  background-color: black;
+}
+.cardPageWrapper .cardInfo .text .Neutral {
+  background-color: gray;
 }
 .list {
   display: flex;
