@@ -40,7 +40,10 @@ function List(props) {
 
                 if (props.sorted.points.toggle) {
                     sortedList = sortedList.filter(crd => {
-                        return crd.points.includes(props.sorted[p].val) && crd.points != null
+                        if(crd.points !== null){
+                            let points = crd.points.split("/");
+                            return points.includes(props.sorted[p].val)
+                        }
                     });
 
                 } else {
