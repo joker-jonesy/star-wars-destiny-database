@@ -300,22 +300,24 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 8px 8px 8px 8px;
-  position: absolute;
+  padding: 160px 8px 8px 8px;
+  position: fixed;
   text-decoration: none;
   top: 0;
   left: 0;
-  min-height: 100%;
+  max-height: 100%;
   background-color: rgba(40, 44, 52, 0.97);
   z-index: 100;
   color: white;
-  overflow-y: auto;
+  overflow: auto;
 }
 @media screen and (min-width: 500px) {
   .cardPageWrapper {
+    padding: 8px;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    min-height: 100%;
   }
 }
 .cardPageWrapper .card {
@@ -465,6 +467,9 @@ html {
 }
 .cardPageWrapper .cardInfo .text .Neutral {
   background-color: gray;
+}
+.cardPageWrapper .cardInfo .text .Hero {
+  border: solid 2px black;
 }
 .list {
   display: flex;

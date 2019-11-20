@@ -5,9 +5,12 @@ import {
 import Card from './Card';
 import CardInfo from './CardInfo';
 
+
 function CardPage(props){
 
     const [card,setCard] = React.useState("");
+
+
 
 
     React.useEffect(()=>{
@@ -49,10 +52,13 @@ function CardPage(props){
 
     const code = card.code;
 
+
     return (
         <Link className={props.match.params.id ? "cardPageWrapper" : undefined} to={"/"}>
+            {/*<div className={"mw"}>*/}
             <Card  name={card.name} imagesrc={card.imagesrc} code={card.code} loadColor={"white"}/>
             {code&&<CardInfo crd={card} code={code}/>}
+            {/*</div>*/}
         </Link>
     )
 }
