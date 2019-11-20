@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faSpinner, faExclamationCircle} from '@fortawesome/free-solid-svg-icons';
+import Side from './Side';
+
 
 function CardInfo(props){
 
@@ -23,23 +27,13 @@ function CardInfo(props){
             legal:true
         }
     ]);
-    const [load, setLoad]= React.useState(false);
 
+    const [rend, rendElement] = React.useState({
+        rst:false,
+        load:true,
+        error:false
+    });
 
-    let subtypes;
-    let sides;
-
-    if(props.crd.subtypes!==undefined){
-       subtypes =props.crd.subtypes.map((sb, idx)=>
-           <h3 key={idx}>{sb.name}{idx!==(props.crd.subtypes.length-1)&&"-"}</h3>
-       );
-    }
-
-    if(props.crd.sides!==undefined){
-        sides = props.crd.sides.map((sd, idx)=>
-            <div key={idx} className={"side"}>{sd}</div>
-        );
-    }
 
     React.useEffect(()=>{
 
@@ -81,15 +75,15 @@ function CardInfo(props){
                             format.legal=true;
                         }
 
+                         rendElement({rst:true,load:false, error:false});
 
-                        formats.push(format);
 
-
+                        return formats.push(format);
 
                     });
 
                     handleStatusChange(formats);
-                }).catch(()=> console.log())
+                }).catch(()=> rendElement({rst:false,load:false, error:true}))
         };
 
         unsubscribe();
@@ -99,7 +93,7 @@ function CardInfo(props){
             unsubscribe();
             abortController.abort();
         };
-    },[]);
+    },[props.code, props.crd.set_code]);
 
     let formats = rst.map((fm, idx)=>
     <div key={idx}>
@@ -118,11 +112,19 @@ function CardInfo(props){
             <h2>{props.crd.cost&& "Cost:"}{props.crd.cost}</h2>
             <h2>{props.crd.points&& "Points:"}{props.crd.points}</h2>
             <h2>{props.crd.type_name}</h2>
-            <div className={"subtypes"}>{subtypes}</div>
-            <div className={"sides"}>{sides}</div>
+            <div className={"subtypes"}>{props.crd.subtypes!==undefined&&props.crd.subtypes.map((sb, idx)=>
+                <h3 key={idx}>{sb.name}{idx!==(props.crd.subtypes.length-1)&&"-"}</h3>
+            )}</div>
+            <div className={"sides"}>{props.crd.sides!==undefined&&props.crd.sides.map((sd, idx)=>
+                <Side key={idx} sd={sd}/>
+            )}</div>
             <h3>{props.crd.has_errata&&"This card has an errata"}</h3>
-            {formats}
-            <p>{props.crd.text}</p>
+            {rend.rst&&formats}
+            <div>
+                {rend.load&&<FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.loadColor}}/>}
+                {rend.error&&<FontAwesomeIcon icon={faExclamationCircle} style={{color:"red"}} size={"6x"}/>}
+            </div>
+            <p dangerouslySetInnerHTML={{ __html: props.crd.text }}></p>
 
             <i>{props.crd.flavor}</i>
 

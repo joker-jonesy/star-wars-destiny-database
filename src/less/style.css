@@ -97,11 +97,9 @@
 }
 .icon-resource:before {
   content: "\e901";
-  color: #000;
 }
 .icon-special:before {
   content: "\e90b";
-  color: #000;
 }
 .icon-battlefield:before {
   content: "\e947";
@@ -299,11 +297,10 @@ html {
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 85px;
+  padding: 85px 8px 8px 8px;
   position: fixed;
   text-decoration: none;
   top: 0;
@@ -318,6 +315,7 @@ html {
   .cardPageWrapper {
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
 .cardPageWrapper .card {
@@ -331,7 +329,6 @@ html {
   color: white;
 }
 .cardPageWrapper .cardInfo {
-  min-height: 100px;
   background-color: white;
   width: 100%;
   color: #343740;
@@ -345,11 +342,48 @@ html {
 }
 .cardPageWrapper .cardInfo .subtypes {
   display: flex;
+  min-height: 10px;
 }
 .cardPageWrapper .cardInfo .sides {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.cardPageWrapper .cardInfo .sides .side {
+  min-height: 25px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 4px;
+  border: solid 1px black;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cardPageWrapper .cardInfo .sides .sd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cardPageWrapper .cardInfo .sides .res {
+  color: gold;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cardPageWrapper .cardInfo .sides .blank {
+  background-color: red;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .list {
   display: flex;
