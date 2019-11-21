@@ -88,8 +88,16 @@ function Side(props){
 
 
     if(!isNaN(props.sd[props.sd.length-1])&&props.sd[props.sd.length-1]!=="-"){
-        finished = finished+"<span class='res'> <span>"+props.sd[props.sd.length-1]+"</span> <span class='icon" +
-            " icon-resource'></span></span>"
+        if(setClass()){
+            finished = finished+"<span class='res modify'> <span>"+props.sd[props.sd.length-1]+"</span> <span" +
+                " class='icon" +
+                " icon-resource'></span></span>"
+        }else{
+            finished = finished+"<span class='res'> <span>"+props.sd[props.sd.length-1]+"</span> <span" +
+                " class='icon" +
+                " icon-resource'></span></span>"
+        }
+
     }
 
 

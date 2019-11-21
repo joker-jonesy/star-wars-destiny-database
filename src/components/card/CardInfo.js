@@ -127,7 +127,29 @@ function CardInfo(props) {
             </div>
             <div className={"text"}>
                 {props.crd.text!==null&&<p dangerouslySetInnerHTML={{__html: props.crd.text.replace("[special]", "<span class='icon" +
-                        " icon-special '></span>")}}></p>}
+                        " icon-special '></span>").replace("([special])", "(<span class='icon" +
+                        " icon-special '></span>)").replace("([indirect])", "(<span class='icon" +
+                        " icon-indirect '></span>)").replace("([melee])", "(<span class='icon" +
+                        " icon-melee '></span>)").replace("([ranged])", "(<span class='icon" +
+                        " icon-ranged '></span>)").replace("([discard])", "(<span class='icon" +
+                        " icon-discard '></span>)").replace("([focus])", "(<span class='icon" +
+                        " icon-focus '></span>)").replace("([disrupt])", "(<span class='icon" +
+                        " icon-disrupt '></span>)").replace("([shield])", "(<span class='icon" +
+                        " icon-shield '></span>)").replace("([resource])", "(<span class='icon" +
+                        " icon-resource '></span>)").replace("([blank])", "(<span class='icon" +
+                        " icon-blank '></span>)").replace("([ranged] or [melee])", "(<span class='icon" +
+                        " icon-ranged '></span> or <span class='icon" +
+                        " icon-melee '></span>)").replace("([melee] or [ranged])", "(<span class='icon" +
+                        " icon-ranged '></span> or <span class='icon" +
+                        " icon-melee '></span>)").replace("([ranged] or [melee])", "(<span class='icon" +
+                        " icon-ranged '></span> or <span class='icon" +
+                        " icon-melee '></span>)").replace("([ranged], [melee] or [indirect])", "(<span class='icon" +
+                        " icon-ranged '></span>, <span class='icon" +
+                        " icon-melee '></span> or <span class='icon" +
+                        " icon-indirect '></span>)").replace("([ranged], [melee], or [indirect])", "(<span class='icon" +
+                        " icon-ranged '></span>, <span class='icon" +
+                        " icon-melee '></span> or <span class='icon" +
+                        " icon-indirect '></span>)")}} className={"effects"}></p>}
 
                 <i>{props.crd.flavor!==null&& props.crd.flavor.replace("<cite>", "-").replace("</cite>", "")}</i>
 
