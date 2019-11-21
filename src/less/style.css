@@ -447,6 +447,14 @@ html {
   justify-content: center;
   align-items: center;
 }
+.cardPageWrapper .cardInfo .text .color {
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .cardPageWrapper .cardInfo .text .rr {
   box-sizing: border-box;
   padding: 8px;

@@ -136,6 +136,12 @@ function CardInfo(props) {
 
                     <div className={"rr "+props.crd.rarity_name}>{props.crd.rarity_name}</div>
 
+                    <div className={"color" } style={{
+                        backgroundColor:props.crd.faction_code,
+                        color: "black"
+                    }}>
+                        {props.crd.faction_code.toUpperCase()}
+                    </div>
                     <div>{props.crd.set_name}: {props.crd.position}</div>
                 </div>
 
