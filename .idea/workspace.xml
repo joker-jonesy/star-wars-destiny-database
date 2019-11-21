@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c786f6e1-bbd5-4088-be44-1cdc1b091e07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.8f9d9eed.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.8f9d9eed.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.822bdc77.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.822bdc77.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CardInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/card.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/card.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/main.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/style.css.map" afterDir="false" />
     </list>
@@ -22,14 +21,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.67855465">
+    <splitter split-orientation="horizontal" split-proportion="0.19943689">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/less/main.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="631">
-                  <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+                <state relative-caret-position="167">
+                  <caret line="90" selection-start-line="90" selection-end-line="90" />
                 </state>
               </provider>
             </entry>
@@ -55,11 +54,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/card/CardPage.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="33">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
+                <state relative-caret-position="23">
+                  <caret line="28" column="63" lean-forward="true" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="78" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -92,11 +91,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/less/card.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="588">
-                  <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+                <state relative-caret-position="539">
+                  <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -104,8 +103,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/card/CardInfo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3564">
-                  <caret line="111" column="100" selection-start-line="111" selection-start-column="100" selection-end-line="111" selection-end-column="100" />
+                <state relative-caret-position="397">
+                  <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -134,11 +133,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/main/List.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="438">
-                  <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+                <state relative-caret-position="289">
+                  <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -181,20 +180,20 @@
         <option value="$PROJECT_DIR$/src/components/nav/Navigation.js" />
         <option value="$PROJECT_DIR$/src/less/fonts.less" />
         <option value="$PROJECT_DIR$/src/data/Sort.js" />
-        <option value="$PROJECT_DIR$/src/components/card/CardInfo.js" />
         <option value="$PROJECT_DIR$/src/components/card/Side.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/components/main/List.js" />
         <option value="$PROJECT_DIR$/src/components/card/CardPage.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/less/card.less" />
         <option value="$PROJECT_DIR$/src/less/main.less" />
+        <option value="$PROJECT_DIR$/src/components/card/CardInfo.js" />
+        <option value="$PROJECT_DIR$/src/less/card.less" />
+        <option value="$PROJECT_DIR$/src/components/main/List.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="24" />
-    <option name="y" value="45" />
+    <option name="x" value="-30" />
+    <option name="y" value="47" />
     <option name="width" value="2536" />
     <option name="height" value="1342" />
   </component>
@@ -316,18 +315,18 @@
       <workItem from="1574262173644" duration="7931000" />
       <workItem from="1574271604958" duration="2311000" />
       <workItem from="1574280609244" duration="4973000" />
-      <workItem from="1574297363294" duration="238000" />
+      <workItem from="1574297363294" duration="783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32653000" />
+    <option name="totallyTimeSpent" value="33198000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="24" y="45" width="2536" height="1342" extended-state="0" />
+    <frame x="-30" y="47" width="2536" height="1342" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1526839" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1526839" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -341,7 +340,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2795786" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2795786" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -441,16 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CardPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/nav/Navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
@@ -465,16 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2970">
           <caret line="90" selection-start-line="90" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CardInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3564">
-          <caret line="111" column="100" selection-start-line="111" selection-start-column="100" selection-end-line="111" selection-end-column="100" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -495,10 +474,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/main/List.js">
+    <entry file="file://$PROJECT_DIR$/src/less/main.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+        <state relative-caret-position="167">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CardPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="28" column="63" lean-forward="true" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CardInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -507,15 +503,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/card.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="539">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+    <entry file="file://$PROJECT_DIR$/src/components/main/List.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+        <state relative-caret-position="289">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -90,7 +90,6 @@ function CardInfo(props) {
 
 
         return function cleanup() {
-            unsubscribe();
             abortController.abort();
         };
     }, [props.code, props.crd.set_code]);
