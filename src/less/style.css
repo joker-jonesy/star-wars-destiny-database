@@ -320,6 +320,15 @@ html {
     min-height: 100%;
   }
 }
+@media screen and (max-device-width: 500px) {
+  .cardPageWrapper {
+    padding: 8px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 100%;
+  }
+}
 .cardPageWrapper .card {
   color: white;
   pointer-events: none;
@@ -515,6 +524,9 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.card .cardWrapper img {
+  display: block;
 }
 .card h1 {
   margin-bottom: 8px;
