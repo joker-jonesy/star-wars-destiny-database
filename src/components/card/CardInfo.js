@@ -149,7 +149,17 @@ function CardInfo(props) {
                         " icon-indirect '></span>)").replace("([ranged], [melee], or [indirect])", "(<span class='icon" +
                         " icon-ranged '></span>, <span class='icon" +
                         " icon-melee '></span> or <span class='icon" +
-                        " icon-indirect '></span>)")}} className={"effects"}></p>}
+                        " icon-indirect '></span>)").replace("[AW]", "<span class='icon" +
+                        " icon-set-AW'></span>").replace("[WotF]", "<span class='icon" +
+                        " icon-set-WotF'></span>").replace("[RIV]", "<span class='icon" +
+                        " icon-set-RIV'></span>").replace("[SoR]", "<span class='icon" +
+                        " icon-set-SoR'></span>").replace("[LEG]", "<span class='icon" +
+                        " icon-set-LEG'></span>").replace("[EaW]", "<span class='icon" +
+                        " icon-set-EaW'></span>").replace("[AtG]", "<span class='icon" +
+                        " icon-set-AtG'></span>").replace("[CONV]", "<span class='icon" +
+                        " icon-set-CONV'></span>").replace("[AoN]", "<span class='icon" +
+                        " icon-set-AoN'></span>").replace("[SoH]", "<span class='icon" +
+                        " icon-set-SoH'></span>")}} className={"effects"}></p>}
 
                 <i>{props.crd.flavor!==null&& props.crd.flavor.replace("<cite>", "-").replace("</cite>", "")}</i>
 
@@ -164,7 +174,7 @@ function CardInfo(props) {
                     }}>
                         {props.crd.faction_code.toUpperCase()}
                     </div>
-                    <div>{props.crd.set_name}: {props.crd.position}</div>
+                    <div><span className={"icon icon-set-"+props.crd.set_code}></span>{props.crd.set_name}: {props.crd.position}</div>
                 </div>
 
 
