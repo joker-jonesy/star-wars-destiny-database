@@ -3,7 +3,7 @@ You can view the active link of the database [RIGHT HERE] (https://joker-jonesy.
 
 The goal with this application is to make card searching much more efficient by providing easier ways to find the exact card you need for your deck you are creating.
 
-## Currently Sosrts Card by
+## Currently Sorts Card by
 * Set
 * Affiliation
 * Color
