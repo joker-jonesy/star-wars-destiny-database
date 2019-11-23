@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c786f6e1-bbd5-4088-be44-1cdc1b091e07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/CardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.5aef6a7f2224a217460b4a97eb90e83d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.d6c0f2bc.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.d6c0f2bc.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/loho.519004a1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/Navigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
     </list>
@@ -18,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7217604">
+    <splitter split-orientation="horizontal" split-proportion="0.46992666">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -34,7 +39,7 @@
             <entry file="file://$PROJECT_DIR$/src/components/card/Card.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="502">
-                  <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="70" selection-end-column="113" />
+                  <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="70" selection-end-column="113" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -42,11 +47,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                <state relative-caret-position="335">
+                  <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -69,7 +74,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
+                <state relative-caret-position="472">
                   <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -81,17 +86,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/nav/Navigation.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="99">
-                  <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+                <state relative-caret-position="33">
+                  <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/main/List.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="517">
-                  <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+                <state relative-caret-position="851">
+                  <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -151,8 +159,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="382">
-                  <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+                <state relative-caret-position="462">
+                  <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="56" />
                 </state>
               </provider>
             </entry>
@@ -234,11 +242,11 @@
         <option value="$PROJECT_DIR$/src/less/nav.less" />
         <option value="$PROJECT_DIR$/src/components/nav/StyleOptions.js" />
         <option value="$PROJECT_DIR$/src/components/card/Card.js" />
+        <option value="$PROJECT_DIR$/src/components/card/CardPage.js" />
+        <option value="$PROJECT_DIR$/src/components/nav/Navigation.js" />
+        <option value="$PROJECT_DIR$/src/components/main/List.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/nav/Navigation.js" />
-        <option value="$PROJECT_DIR$/src/components/card/CardPage.js" />
-        <option value="$PROJECT_DIR$/src/components/main/List.js" />
       </list>
     </option>
   </component>
@@ -401,12 +409,12 @@
       <workItem from="1574280609244" duration="4973000" />
       <workItem from="1574297363294" duration="1306000" />
       <workItem from="1574349282606" duration="2386000" />
-      <workItem from="1574536550325" duration="13151000" />
+      <workItem from="1574536550325" duration="14415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49258000" />
+    <option name="totallyTimeSpent" value="50522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="47" width="2536" height="1342" extended-state="0" />
@@ -607,51 +615,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/card/Card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
-          <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="70" selection-end-column="113" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/nav/Navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CardPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="70" selection-end-column="113" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -668,10 +632,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CardPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav/Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main/List.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+        <state relative-caret-position="851">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

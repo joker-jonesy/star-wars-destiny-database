@@ -12,19 +12,14 @@ const initState = {
         cost: {toggle: false, val: []},
         points: {toggle: false, val: []}
     },
-    style:{
-        name:"Awakenings",
-        nav:"white",
-        body:"black",
-        navText:"black",
-        bodyText:"white"
-    },
+    style:JSON.parse(localStorage.getItem('localStyle')) || '',
     name: "",
     options:false,
     styles:false
 
 
 };
+
 
 const rootReducer = (state = initState, action) => {
 

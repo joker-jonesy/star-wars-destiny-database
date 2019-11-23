@@ -16,15 +16,26 @@ import {
 
 function App(props) {
 
+    const [style, setValue] = React.useState(
+        JSON.parse(localStorage.getItem('localStyle')) || ''
+    );
+
+    React.useEffect(() => {
+        localStorage.setItem('localStyle', JSON.stringify(props.style));
+        setValue(props.style);
+    }, [props.style, style]);
+
+
+
     document.documentElement.style.backgroundColor=props.style.body;
 
     return (
 
-        <div className="App" style={{backgroundColor: props.style.body}}>
+        <div className="App" style={{backgroundColor: style.body}}>
             <Nav/>
             <Options/>
             <StyleOptions/>
-            <div className={"mainWrapper"} style={{color:props.style.bodyText, backgroundColor: props.style.body}}>
+            <div className={"mainWrapper"} style={{color:style.bodyText, backgroundColor: props.style.body}}>
                 <Switch>
                     <Route path="/" component={List}/>
                 </Switch>
