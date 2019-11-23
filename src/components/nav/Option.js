@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronUp, faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import OptionItem from './OptionItem';
+import {connect} from 'react-redux';
 
 function Option (props){
     const [drop, toggleDrop] = React.useState(false);
@@ -26,7 +27,7 @@ function Option (props){
 
     return(
         <div className={"option"}>
-            <h3 className={"optHead"} onClick={()=>toggleDrop(!drop)}>
+            <h3 className={"optHead"} style={{color:props.style.nav}} onClick={()=>toggleDrop(!drop)}>
                 {props.opt.name}
                 {!drop && <FontAwesomeIcon icon={faChevronDown} />}
                 {drop && <FontAwesomeIcon icon={faChevronUp} />}
@@ -39,4 +40,10 @@ function Option (props){
 
 }
 
-export default Option;
+const mapStateToProps = (state) => {
+    return {
+        style:state.style
+    }
+};
+
+export default connect(mapStateToProps)(Option);

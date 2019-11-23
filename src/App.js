@@ -4,6 +4,8 @@ import List from './components/main/List';
 import CardPage from './components/card/CardPage'
 import Nav from './components/nav/Navigation';
 import Options from './components/nav/options';
+import StyleOptions from './components/nav/StyleOptions';
+import {connect} from 'react-redux';
 
 import {
     Switch,
@@ -12,14 +14,17 @@ import {
 
 
 
-function App() {
+function App(props) {
+
+    document.documentElement.style.backgroundColor=props.style.body;
 
     return (
 
-        <div className="App">
+        <div className="App" style={{backgroundColor: props.style.body}}>
             <Nav/>
             <Options/>
-            <div className={"mainWrapper"}>
+            <StyleOptions/>
+            <div className={"mainWrapper"} style={{color:props.style.bodyText, backgroundColor: props.style.body}}>
                 <Switch>
                     <Route path="/" component={List}/>
                 </Switch>
@@ -29,5 +34,11 @@ function App() {
     );
 }
 
+const mapStateToProps = (state) => {
+    return {
+        style:state.style
+    }
+};
 
-export default App;
+
+export default connect(mapStateToProps)(App);

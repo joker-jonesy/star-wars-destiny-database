@@ -26,6 +26,20 @@ export const toggleOptions = () => {
     }
 };
 
+export const toggleStyles = () => {
+    return {
+        type: 'TOGGLE_STYLES'
+    }
+};
+
+export const setStyles = (style) => {
+    return {
+        type: 'SET_STYLE',
+        style:style
+
+    }
+};
+
 export const clearOptions = () =>{
     return {
         type: 'CLEAR_OPTIONS'

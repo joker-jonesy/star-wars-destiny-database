@@ -1,0 +1,23 @@
+export const Styles = [
+    {
+        name:"Awakenings",
+        nav:"white",
+        body:"black",
+        navText:"black",
+        bodyText:"white"
+    },
+    {
+        name:"Legacies",
+        nav:"red",
+        body:"white",
+        navText:"white",
+        bodyText:"red"
+    },
+    {
+        name:"Convergence",
+        nav:"#343740",
+        body:"#ededed",
+        navText:"white",
+        bodyText:"#343740"
+    }
+];

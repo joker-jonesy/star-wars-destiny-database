@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/star-wars-destiny-database/static/css/main.891b723a.chunk.css",
-    "main.js": "/star-wars-destiny-database/static/js/main.ec92a813.chunk.js",
-    "main.js.map": "/star-wars-destiny-database/static/js/main.ec92a813.chunk.js.map",
+    "main.css": "/star-wars-destiny-database/static/css/main.a511db00.chunk.css",
+    "main.js": "/star-wars-destiny-database/static/js/main.d6c0f2bc.chunk.js",
+    "main.js.map": "/star-wars-destiny-database/static/js/main.d6c0f2bc.chunk.js.map",
     "runtime-main.js": "/star-wars-destiny-database/static/js/runtime-main.d63828c1.js",
     "runtime-main.js.map": "/star-wars-destiny-database/static/js/runtime-main.d63828c1.js.map",
-    "static/js/2.2789496d.chunk.js": "/star-wars-destiny-database/static/js/2.2789496d.chunk.js",
-    "static/js/2.2789496d.chunk.js.map": "/star-wars-destiny-database/static/js/2.2789496d.chunk.js.map",
+    "static/js/2.62db7b9a.chunk.js": "/star-wars-destiny-database/static/js/2.62db7b9a.chunk.js",
+    "static/js/2.62db7b9a.chunk.js.map": "/star-wars-destiny-database/static/js/2.62db7b9a.chunk.js.map",
     "index.html": "/star-wars-destiny-database/index.html",
-    "precache-manifest.ea89613596d2d35319ad45ad771737c9.js": "/star-wars-destiny-database/precache-manifest.ea89613596d2d35319ad45ad771737c9.js",
+    "precache-manifest.5aef6a7f2224a217460b4a97eb90e83d.js": "/star-wars-destiny-database/precache-manifest.5aef6a7f2224a217460b4a97eb90e83d.js",
     "service-worker.js": "/star-wars-destiny-database/service-worker.js",
-    "static/css/main.891b723a.chunk.css.map": "/star-wars-destiny-database/static/css/main.891b723a.chunk.css.map",
-    "static/media/logo.png": "/star-wars-destiny-database/static/media/logo.faa1ee06.png",
+    "static/css/main.a511db00.chunk.css.map": "/star-wars-destiny-database/static/css/main.a511db00.chunk.css.map",
+    "static/media/awakeningslogo.svg": "/star-wars-destiny-database/static/media/awakeningslogo.519004a1.svg",
+    "static/media/convergencelogo.svg": "/star-wars-destiny-database/static/media/convergencelogo.f7ca2921.svg",
+    "static/media/legacieslogo.svg": "/star-wars-destiny-database/static/media/legacieslogo.f7ca2921.svg",
+    "static/media/loho.svg": "/star-wars-destiny-database/static/media/loho.519004a1.svg",
     "static/media/style.css": "/star-wars-destiny-database/static/media/swdestiny.e78d43a4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d63828c1.js",
-    "static/js/2.2789496d.chunk.js",
-    "static/css/main.891b723a.chunk.css",
-    "static/js/main.ec92a813.chunk.js"
+    "static/js/2.62db7b9a.chunk.js",
+    "static/css/main.a511db00.chunk.css",
+    "static/js/main.d6c0f2bc.chunk.js"
   ]
 }

@@ -16,7 +16,13 @@ function OptionItem(props) {
 
     if (props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle) {
         shower = {
-            "backgroundColor": "#343740"
+            backgroundColor: props.style.navText,
+            color:props.style.nav
+        }
+    }else{
+        shower = {
+            backgroundColor: props.style.nav,
+            color:props.style.navText
         }
     }
 
@@ -37,7 +43,8 @@ function OptionItem(props) {
 
 const mapStateToProps = (state) => {
     return {
-        sorted: state.sorted
+        sorted: state.sorted,
+        style:state.style
     }
 };
 

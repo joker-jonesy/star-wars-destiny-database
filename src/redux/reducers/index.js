@@ -12,8 +12,16 @@ const initState = {
         cost: {toggle: false, val: []},
         points: {toggle: false, val: []}
     },
+    style:{
+        name:"Awakenings",
+        nav:"white",
+        body:"black",
+        navText:"black",
+        bodyText:"white"
+    },
     name: "",
-    options:false
+    options:false,
+    styles:false
 
 
 };
@@ -69,11 +77,34 @@ const rootReducer = (state = initState, action) => {
         }
     }
 
+    if(action.type === 'SET_STYLE'){
+
+        document.documentElement.style.backgroundColor=action.style.body;
+
+
+        return{
+            ...state,
+            style:action.style
+        }
+    }
+
     if(action.type === 'TOGGLE_OPTIONS'){
 
         return{
             ...state,
-            options:!state.options
+            options:!state.options,
+            styles:false
+        }
+    }
+
+    if(action.type === 'TOGGLE_STYLES'){
+
+
+
+        return{
+            ...state,
+            styles:!state.styles,
+            options:false
         }
     }
 

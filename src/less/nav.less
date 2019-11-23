@@ -17,9 +17,11 @@ nav {
     text-decoration: none;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
+
+    width: 160px;
   }
 
   img {
@@ -28,30 +30,28 @@ nav {
 
   .ham {
     height: 100%;
-    width: 80px;
+    width: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     cursor: pointer;
-    transition: 0.25s;
+  }
 
+  svg{
+    transition: 0.15s;
     &:hover {
-      font-size: 24px;
-      color: @background;
+      font-size: 36px;
+      opacity: 0.75;
     }
-
-
   }
 
 
 }
 
-.options {
+.options, .navOptions {
   position: fixed;
   bottom: 0;
-  right: 0;
   height: 100%;
-  background-color: @menubackground;
   width: 100%;
   transition: 0.25s;
   box-sizing: border-box;
@@ -61,7 +61,6 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: white;
   overflow-y: scroll;
 
   @media screen and (min-width: 600px) {
@@ -78,27 +77,24 @@ nav {
 
   h1 {
     width: 100%;
-    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
     box-sizing: border-box;
     padding: 8px;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid;
   }
 
 
   h3 {
     width: 100%;
-    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 40px;
     box-sizing: border-box;
     padding: 8px;
-    border-bottom: 3px solid white;
 
     svg {
       font-size: 16px;
@@ -106,7 +102,7 @@ nav {
     }
   }
 
-  .listOpt {
+  .listOpt, .styleItem {
     list-style: none;
     overflow: hidden;
     transition: 0.15s;
@@ -115,13 +111,13 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid;
 
     &:last-child{
       border-bottom: none;
       .item{
         &:last-child{
-          border-bottom: 2px solid @fontColor;
+          border-bottom: 3px solid;
         }
       }
     }
@@ -135,7 +131,7 @@ nav {
       box-sizing: border-box;
       padding: 8px;
       width: 100%;
-      border-bottom: 2px solid @fontColor;
+      border-bottom: 2px solid;
 
       &:last-child{
         border-bottom: none;
@@ -145,8 +141,30 @@ nav {
         height: 18px;
         width: 18px;
         border-radius: 18px;
-        background-color: black;
       }
     }
   }
+}
+
+.navOptions{
+  box-sizing: border-box;
+  .item{
+    transition: 0.15s;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: inherit;
+    padding: 8px;
+    border-bottom: 2px solid;
+    font-size: 21px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+.options{
+  box-sizing: border-box;
+  border-left: 2px solid;
 }

@@ -1,24 +1,34 @@
 import React from 'react';
-import {toggleOptions, clearOptions} from "../../redux/actions/setActions";
+import {toggleOptions, clearOptions, toggleStyles} from "../../redux/actions/setActions";
 import {connect} from 'react-redux';
-
 import Search from '../input/Search';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/loho.svg';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faSearch, faTimes} from '@fortawesome/free-solid-svg-icons';
+import {faSearch, faTimes, faPalette} from '@fortawesome/free-solid-svg-icons';
 
 function Nav(props) {
+
+    let style= {
+        color:props.style.navText,
+        backgroundColor:props.style.nav
+    };
 
     return (
 
 
-        <nav>
-            <div className={"logo"} onClick={()=>props.clearOptions()}><img alt={"logo"} src={Logo}/></div>
+        <nav style={style}>
+            <div className={"logo"} >
+                <img alt={"logo"} src={require("./../../assets/"+props.style.name.toLowerCase()+"logo.svg")} onClick={()=>props.clearOptions()}/>
+            </div>
             <Search/>
-            <div className={"ham"} onClick={() => props.toggleOptions()}>
+            <div className={"ham"} >
 
-                {!props.options && <FontAwesomeIcon icon={faSearch} size="2x"/>}
-                {props.options && <FontAwesomeIcon icon={faTimes} size="2x"/>}
+                {!props.styles && <FontAwesomeIcon icon={faPalette} size="2x" onClick={() => props.toggleStyles()}/>}
+                {props.styles && <FontAwesomeIcon icon={faTimes} size="2x" onClick={() => props.toggleStyles()}/>}
+
+                {!props.options && <FontAwesomeIcon icon={faSearch} size="2x" onClick={() => props.toggleOptions()}/>}
+                {props.options && <FontAwesomeIcon icon={faTimes} size="2x" onClick={() => props.toggleOptions()}/>}
+
             </div>
 
         </nav>
@@ -30,7 +40,9 @@ function Nav(props) {
 
 const mapStateToProps = (state) => {
     return {
-        options: state.options
+        options: state.options,
+        styles:state.styles,
+        style:state.style
     }
 };
 
@@ -41,6 +53,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         clearOptions:()=>{
             dispatch(clearOptions())
+        },
+        toggleStyles: ()=>{
+            dispatch(toggleStyles())
         }
     }
 };

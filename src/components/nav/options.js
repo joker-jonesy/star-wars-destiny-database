@@ -11,11 +11,15 @@ function Options(props){
 
     if(props.options){
         show={
-            "right":"0"
+            "right":"0",
+            backgroundColor:props.style.navText,
+            color:props.style.nav
         }
     }else{
         show={
-            "right":"-100%"
+            "right":"-100%",
+            backgroundColor:props.style.navText,
+            color:props.style.nav
         }
     }
 
@@ -26,7 +30,7 @@ function Options(props){
 
     return (
         <div className={"options"} style={show}>
-            <h1>Sort Cards</h1>
+            <h1 style={{color:props.style.nav}}>Sort Cards</h1>
             <div className={"wrapper"}>
                 {options}
             </div>
@@ -37,7 +41,8 @@ function Options(props){
 
 const mapStateToProps = (state) => {
     return {
-        options:state.options
+        options:state.options,
+        style:state.style
     }
 };
 

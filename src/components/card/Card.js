@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSpinner, faExclamationCircle} from '@fortawesome/free-solid-svg-icons';
+import {connect} from "react-redux";
 function Card(props) {
 
     const [load, updateLoading] = React.useState("loading");
@@ -61,8 +62,8 @@ function Card(props) {
     };
 
     return (
-        <div className={"card"} >
-            <h1>{props.name}</h1>
+        <div className={"card"}>
+            <h1 style={{color:props.style.bodyText}}>{props.name}</h1>
             <div className={"cardWrapper"}>
                 {rend.img && <img alt={props.name} onLoad={handleImageLoad} onError={handleImageError} src={props.imagesrc}/>}
                 <div>
@@ -76,4 +77,10 @@ function Card(props) {
     )
 }
 
-export default Card;
+const mapStateToProps = (state) => {
+    return {
+        style:state.style
+    }
+};
+
+export default connect(mapStateToProps)(Card);
