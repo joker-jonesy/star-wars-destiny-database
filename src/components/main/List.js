@@ -39,20 +39,19 @@ function List(props) {
             if (props.sorted[p].toggle) {
 
                 if (props.sorted.points.toggle) {
-                    sortedList = sortedList.filter(crd => {
-
-                            return (crd.points !== null) ?  crd.points.split("/").includes(props.sorted[p].val):null
-                    });
+                    for(let i=0; i<props.sorted.points.val.length; i++){
+                        sortedList = sortedList.filter(crd => {
+                            return (crd.points !== null) ? crd.points.split("/").includes("" + props.sorted.points.val[i] + "") : null
+                        });
+                    }
 
                 } else {
                     sortedList = sortedList.filter(crd => {
 
-                        return crd[p] === props.sorted[p].val
+                        return props.sorted[p].val.includes(crd[p])
 
                     });
                 }
-
-
             }
         }
 

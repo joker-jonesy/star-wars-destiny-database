@@ -14,7 +14,7 @@ function OptionItem(props) {
         props.setSort(prop, toggleReturn(prop, val), val)
     };
 
-    if (props.sorted[props.type].val === props.value && props.sorted[props.type].toggle) {
+    if (props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle) {
         shower = {
             "backgroundColor": "#343740"
         }
