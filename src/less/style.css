@@ -182,6 +182,8 @@ nav svg:hover {
   align-items: center;
   flex-direction: column;
   overflow-y: scroll;
+  background-color: black;
+  color: white;
 }
 @media screen and (min-width: 600px) {
   .options,
@@ -262,6 +264,8 @@ nav svg:hover {
   padding: 8px;
   width: 100%;
   border-bottom: 2px solid;
+  background-color: white;
+  color: black;
 }
 .options .listOpt .item:last-child,
 .navOptions .listOpt .item:last-child,
@@ -574,6 +578,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #343740;
 }
 .card .cardWrapper {
   min-height: 298px;

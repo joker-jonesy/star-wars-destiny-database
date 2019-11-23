@@ -17,7 +17,7 @@ function Nav(props) {
 
         <nav style={style}>
             <div className={"logo"} >
-                {props.style.name!==null&&<img alt={"logo"} src={require("./../../assets/"+props.style.name.toLowerCase()+"logo.svg")} onClick={()=>props.clearOptions()}/>}
+                {(props.style.name!==undefined)?<img alt={"logo"} src={require("./../../assets/"+props.style.name.toLowerCase()+"logo.svg")} onClick={()=>props.clearOptions()}/>:<img alt={"logo"} src={require("./../../assets/convergencelogo.svg")} onClick={()=>props.clearOptions()}/>}
             </div>
             <Search/>
             <div className={"ham"} >
