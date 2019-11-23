@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d48dc11154cb43d68b4598441a8bbd37",
+    "revision": "7960a76aa553e27fca9dd15a7ed72466",
     "url": "/star-wars-destiny-database/index.html"
   },
   {
-    "revision": "8bbf9a2f6b0d1e3a98a3",
+    "revision": "838d036695b3ef31aa23",
     "url": "/star-wars-destiny-database/static/css/main.a511db00.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/star-wars-destiny-database/static/js/2.62db7b9a.chunk.js"
   },
   {
-    "revision": "8bbf9a2f6b0d1e3a98a3",
-    "url": "/star-wars-destiny-database/static/js/main.d6c0f2bc.chunk.js"
+    "revision": "838d036695b3ef31aa23",
+    "url": "/star-wars-destiny-database/static/js/main.9d0f9690.chunk.js"
   },
   {
     "revision": "f6f415a01d1d9c3b23ad",
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f7ca2921fce73f16089734db557d6020",
     "url": "/star-wars-destiny-database/static/media/legacieslogo.f7ca2921.svg"
-  },
-  {
-    "revision": "519004a1cb31fd1a14935fcb8b47ee73",
-    "url": "/star-wars-destiny-database/static/media/loho.519004a1.svg"
   },
   {
     "revision": "2a0eaf8d4280d5be69ea8d669190a473",
