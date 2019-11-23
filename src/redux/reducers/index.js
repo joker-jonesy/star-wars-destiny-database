@@ -81,7 +81,6 @@ const rootReducer = (state = initState, action) => {
 
         document.documentElement.style.backgroundColor=action.style.body;
 
-
         return{
             ...state,
             style:action.style
@@ -98,7 +97,6 @@ const rootReducer = (state = initState, action) => {
     }
 
     if(action.type === 'TOGGLE_STYLES'){
-
 
 
         return{

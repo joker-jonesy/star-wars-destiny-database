@@ -63,7 +63,7 @@ function Card(props) {
 
     return (
         <div className={"card"}>
-            <h1 style={{color:props.style.bodyText}}>{props.name}</h1>
+            {props.bod&&<h1 style={{color:props.style.bodyText}}>{props.name}</h1>}
             <div className={"cardWrapper"}>
                 {rend.img && <img alt={props.name} onLoad={handleImageLoad} onError={handleImageError} src={props.imagesrc}/>}
                 <div>

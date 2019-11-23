@@ -2,7 +2,6 @@ import React from 'react';
 import {toggleOptions, clearOptions, toggleStyles} from "../../redux/actions/setActions";
 import {connect} from 'react-redux';
 import Search from '../input/Search';
-import Logo from '../../assets/loho.svg';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch, faTimes, faPalette} from '@fortawesome/free-solid-svg-icons';
 
