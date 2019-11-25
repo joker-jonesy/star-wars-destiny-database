@@ -109,21 +109,22 @@ html {
       min-height: 10px;
     }
 
-    .cost{
+    .cost {
       display: flex;
       align-items: center;
 
-      span{
+      span {
         margin: 5px;
       }
     }
 
-    .formats{
+    .formats {
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin: 8px;
-      .format{
+
+      .format {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -132,6 +133,10 @@ html {
         border-radius: 8px;
         box-sizing: border-box;
         padding: 8px;
+
+        .restrict {
+          color: red;
+        }
       }
 
     }
@@ -156,7 +161,7 @@ html {
 
       }
 
-      .sd{
+      .sd {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -164,24 +169,25 @@ html {
         height: 100%;
       }
 
-      .modify{
+      .modify {
         background-color: blue;
         color: white;
       }
 
-      .res{
+      .res {
         color: gold;
         font-size: 12px;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        *{
+
+        * {
           margin: 2px;
         }
       }
 
-      .blank{
+      .blank {
         background-color: red;
         color: white;
         width: 100%;
@@ -194,35 +200,46 @@ html {
 
     }
 
-    .text{
+    .text {
       width: 100%;
-      *{
+
+      .errata {
+        color: red;
+      }
+
+      * {
         margin: 8px;
       }
 
-      .effects{
-        .icon{
+      .effects {
+        .icon {
           font-size: 12px;
           margin: 0 2px;
         }
 
-        i{
+        i {
           margin: 0;
         }
 
-        b{
+        b {
           margin: 0;
         }
       }
 
-      .bottom{
+      .bottom {
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         align-items: center;
+
+
+        .setStuff {
+          width: 100%;
+        }
       }
 
-      .affl{
+      .affl {
         box-sizing: border-box;
         padding: 8px;
         border-radius: 8px;
@@ -231,7 +248,7 @@ html {
         align-items: center;
       }
 
-      .color{
+      .color {
         box-sizing: border-box;
         padding: 8px;
         border-radius: 8px;
@@ -240,7 +257,7 @@ html {
         align-items: center;
       }
 
-      .rr{
+      .rr {
         box-sizing: border-box;
         padding: 8px;
         border-radius: 8px;
@@ -249,36 +266,36 @@ html {
         align-items: center;
       }
 
-      .Starter{
+      .Starter {
         background-color: gray;
       }
 
-      .Common{
-        background-color:  lightskyblue;
+      .Common {
+        background-color: lightskyblue;
       }
 
-      .Uncommon{
+      .Uncommon {
         background-color: yellow;
       }
 
-      .Rare{
+      .Rare {
         background-color: greenyellow;
       }
 
-      .Legendary{
+      .Legendary {
         background-color: plum;
       }
 
-      .Villain{
+      .Villain {
         color: white;
         background-color: black;
       }
 
-      .Neutral{
+      .Neutral {
         background-color: gray;
       }
 
-      .Hero{
+      .Hero {
         border: solid 2px black;
       }
     }

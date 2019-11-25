@@ -97,7 +97,7 @@ function CardInfo(props) {
     let formats = rst.map((fm, idx) =>
         <div key={idx} className={"format"}>
             <h3>{fm.name}</h3>
-            <h3>{fm.restricted ? "Restricted" : null}</h3>
+            <h5 className={"restrict"}>{fm.restricted ? "Restricted" : null}</h5>
             <h3>{fm.balance}</h3>
             <h6>Legal: {fm.legal ? "Playable" : "Unplayable"}</h6>
         </div>
@@ -117,7 +117,6 @@ function CardInfo(props) {
             <div className={"sides"}>{props.crd.sides !== undefined && props.crd.sides.map((sd, idx) =>
                 <Side key={idx} sd={sd}/>
             )}</div>
-            <h3>{props.crd.has_errata && "This card has an errata"}</h3>
             <div className={"formats"}>
                 {rend.rst && formats}
             </div>
@@ -126,6 +125,7 @@ function CardInfo(props) {
                 {rend.error && <FontAwesomeIcon icon={faExclamationCircle} style={{color: "red"}} size={"6x"}/>}
             </div>
             <div className={"text"}>
+                <h3 className={"errata"}>{props.crd.has_errata && "This card has an errata"}</h3>
                 {props.crd.text!==null&&<p dangerouslySetInnerHTML={{__html: props.crd.text.replace("[special]", "<span class='icon" +
                         " icon-special '></span>").replace("([special])", "(<span class='icon" +
                         " icon-special '></span>)").replace("([indirect])", "(<span class='icon" +
@@ -174,7 +174,7 @@ function CardInfo(props) {
                     }}>
                         {props.crd.faction_code.toUpperCase()}
                     </div>
-                    <div><span className={"icon icon-set-"+props.crd.set_code}></span>{props.crd.set_name}: {props.crd.position}</div>
+                    <div className={"setStuff"}><span className={"icon icon-set-"+props.crd.set_code}></span>{props.crd.set_name}: {props.crd.position}</div>
                 </div>
 
 

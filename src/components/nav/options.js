@@ -30,11 +30,11 @@ function Options(props){
 
     return (
         <div className={"options"} style={show}>
-            <h1 style={{color:props.style.nav}}>Sort Cards</h1>
+            <div className={"top"}><h1 style={{color:props.style.nav}}>Sort Cards </h1><Button handleClick={() => props.clearOptions()} text={"Clear Search Query"}/></div>
             <div className={"wrapper"}>
                 {options}
             </div>
-            <Button handleClick={() => props.clearOptions()} text={"Clear Search Query"}/>
+
         </div>
     )
 }

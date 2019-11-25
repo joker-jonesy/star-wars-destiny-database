@@ -28,7 +28,7 @@ function StyleOptions(props) {
 
     return (
         <div className={"navOptions"} style={show}>
-            <h1 style={{color:props.style.navText}}>Change Style</h1>
+            <div className={"top"}><h1 style={{color:props.style.navText}}>Change Style</h1></div>
             <div className={"wrapper"}>
                 {styles}
             </div>
