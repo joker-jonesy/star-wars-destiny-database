@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/star-wars-destiny-database/static/css/main.c53e0c8b.chunk.css",
-    "main.js": "/star-wars-destiny-database/static/js/main.3995c8d9.chunk.js",
-    "main.js.map": "/star-wars-destiny-database/static/js/main.3995c8d9.chunk.js.map",
+    "main.css": "/star-wars-destiny-database/static/css/main.c74b578a.chunk.css",
+    "main.js": "/star-wars-destiny-database/static/js/main.4ae91dc8.chunk.js",
+    "main.js.map": "/star-wars-destiny-database/static/js/main.4ae91dc8.chunk.js.map",
     "runtime-main.js": "/star-wars-destiny-database/static/js/runtime-main.d63828c1.js",
     "runtime-main.js.map": "/star-wars-destiny-database/static/js/runtime-main.d63828c1.js.map",
     "static/js/2.351642a2.chunk.js": "/star-wars-destiny-database/static/js/2.351642a2.chunk.js",
     "static/js/2.351642a2.chunk.js.map": "/star-wars-destiny-database/static/js/2.351642a2.chunk.js.map",
     "index.html": "/star-wars-destiny-database/index.html",
-    "precache-manifest.a70f4e541cc4bba2f72e9ad6ca900b51.js": "/star-wars-destiny-database/precache-manifest.a70f4e541cc4bba2f72e9ad6ca900b51.js",
+    "precache-manifest.a4fe8735896799d65bf8b6c0be5af6b1.js": "/star-wars-destiny-database/precache-manifest.a4fe8735896799d65bf8b6c0be5af6b1.js",
     "service-worker.js": "/star-wars-destiny-database/service-worker.js",
-    "static/css/main.c53e0c8b.chunk.css.map": "/star-wars-destiny-database/static/css/main.c53e0c8b.chunk.css.map",
+    "static/css/main.c74b578a.chunk.css.map": "/star-wars-destiny-database/static/css/main.c74b578a.chunk.css.map",
     "static/media/awakeningslogo.svg": "/star-wars-destiny-database/static/media/awakeningslogo.519004a1.svg",
     "static/media/convergencelogo.svg": "/star-wars-destiny-database/static/media/convergencelogo.f7ca2921.svg",
     "static/media/legacieslogo.svg": "/star-wars-destiny-database/static/media/legacieslogo.f7ca2921.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.d63828c1.js",
     "static/js/2.351642a2.chunk.js",
-    "static/css/main.c53e0c8b.chunk.css",
-    "static/js/main.3995c8d9.chunk.js"
+    "static/css/main.c74b578a.chunk.css",
+    "static/js/main.4ae91dc8.chunk.js"
   ]
 }
