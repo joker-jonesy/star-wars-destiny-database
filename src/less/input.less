@@ -27,7 +27,7 @@
 
 .search {
   height: 40px;
-  width: 45%;
+  width: 55%;
 
   outline: none;
   border: solid 3px @background;
@@ -35,6 +35,12 @@
   box-sizing: border-box;
   padding: 8px;
   font-size: 21px;
+
+  @media screen and (max-device-width: 600px) {
+    width: 47%;
+    font-size: 12px;
+    padding: 6px;
+  }
 
   @media screen and (min-width: 700px) {
     width: 500px;

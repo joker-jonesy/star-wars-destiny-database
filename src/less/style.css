@@ -147,14 +147,14 @@ nav .logo {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  width: 160px;
+  width: 80px;
 }
 nav img {
   height: 90%;
 }
 nav .ham {
   height: 100%;
-  width: 120px;
+  width: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -662,13 +662,20 @@ html {
 }
 .search {
   height: 40px;
-  width: 45%;
+  width: 55%;
   outline: none;
   border: solid 3px #ededed;
   border-radius: 10px;
   box-sizing: border-box;
   padding: 8px;
   font-size: 21px;
+}
+@media screen and (max-device-width: 600px) {
+  .search {
+    width: 47%;
+    font-size: 12px;
+    padding: 6px;
+  }
 }
 @media screen and (min-width: 700px) {
   .search {
