@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/star-wars-destiny-database/precache-manifest.576f0d0f0bc79b646fd5a33905b366c5.js"
+  "/star-wars-destiny-database/precache-manifest.dd967ceb9cf2f7834f1d204328e0931d.js"
 );
 
 self.addEventListener('message', (event) => {
