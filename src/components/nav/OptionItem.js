@@ -28,23 +28,25 @@ function OptionItem(props) {
 
     const numberCheck = () => {
         if(props.value==="RD"){
-            return <span className='icon icon-ranged'></span>
+            return <span><span className='icon icon-ranged'></span> Ranged</span>
         }else if(props.value==="Sh"){
-            return <span className='icon icon-shield'></span>
+            return <span><span className='icon icon-shield'></span> Shield</span>
         }else if(props.value==="MD"){
-            return <span className='icon icon-melee'></span>
+            return <span><span className='icon icon-melee'></span> Melee</span>
         }else if(props.value==="ID"){
-            return <span className='icon icon-indirect'></span>
+            return <span><span className='icon icon-indirect'></span> Indirect</span>
         }else if(props.value==="Dc"){
-            return <span className='icon icon-discard'></span>
+            return <span><span className='icon icon-discard'></span> Discard</span>
         }else if(props.value==="Dr"){
-            return <span className='icon icon-disrupt'></span>
+            return <span><span className='icon icon-disrupt'></span> Disrupt</span>
         }else if(props.value==="F"){
-            return <span className='icon icon-focus'></span>
+            return <span><span className='icon icon-focus'></span> Focus</span>
         }else if(props.value==="Sp"){
-            return <span className='icon icon-special'></span>
+            return <span><span className='icon icon-special'></span> Special</span>
         }else if(props.value==="-"){
-            return <span className='icon icon-blank'></span>
+            return <span><span className='icon icon-blank'></span> Blank</span>
+        }else if(props.value==="+"){
+            return <span>Modified</span>
         }else if (isNaN(props.value)) {
             return props.value.charAt(0).toUpperCase() + props.value.substring(1)
         } else {

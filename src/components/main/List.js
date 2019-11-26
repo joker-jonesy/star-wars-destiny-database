@@ -111,7 +111,7 @@ function List(props) {
         cardEle = sort.slice(0, props.itemLimit).map((crd, idx) =>
 
 
-            <Link to={"/" + crd.code} key={idx}>
+            <Link to={"/" + crd.code} key={idx} className={"cardFlop"}>
 
                 <Card name={crd.name} bod={true} imagesrc={crd.imagesrc} code={crd.code}
                       loadColor={"#343740"}/>

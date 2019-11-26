@@ -61,6 +61,7 @@ html {
   z-index: 100;
   color: white;
   overflow: auto;
+  cursor: initial;
 
 
   @media screen and (min-width: 500px) {
@@ -77,6 +78,21 @@ html {
     justify-content: space-around;
     flex-wrap: wrap;
     min-height: 100%;
+  }
+
+  .close{
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
   }
 
   .card {
@@ -120,9 +136,9 @@ html {
 
     .formats {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      margin: 8px;
+      margin: 8px 0;
 
       .format {
         display: flex;
@@ -133,6 +149,7 @@ html {
         border-radius: 8px;
         box-sizing: border-box;
         padding: 8px;
+        width: 100px;
 
         .restrict {
           color: red;
@@ -144,18 +161,19 @@ html {
     .sides {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      margin: 8px;
+      justify-content: space-between;
+      margin: 8px 0;
 
       .side {
-        min-height: 25px;
+        height: 35px;
         width: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         box-sizing: border-box;
-        border: solid 1px black;
+        background-color: black;
+        color: white;
         border-radius: 8px;
         overflow: hidden;
 
@@ -167,6 +185,9 @@ html {
         align-items: center;
         width: 100%;
         height: 100%;
+        span{
+          margin-left: 3px;
+        }
       }
 
       .modify {
@@ -176,7 +197,7 @@ html {
 
       .res {
         color: gold;
-        font-size: 12px;
+        font-size: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -202,13 +223,16 @@ html {
 
     .text {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
 
       .errata {
         color: red;
       }
 
       * {
-        margin: 8px;
+        margin: 8px 0;
       }
 
       .effects {
@@ -233,9 +257,17 @@ html {
         justify-content: flex-start;
         align-items: center;
 
+        *{
+          margin: 8px 0;
+        }
+
 
         .setStuff {
           width: 100%;
+
+          span{
+            margin-right: 8px;
+          }
         }
       }
 
@@ -246,6 +278,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 8px;
       }
 
       .color {
@@ -257,6 +290,8 @@ html {
         align-items: center;
       }
 
+
+
       .rr {
         box-sizing: border-box;
         padding: 8px;
@@ -264,6 +299,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 8px;
       }
 
       .Starter {

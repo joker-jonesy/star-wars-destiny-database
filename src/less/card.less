@@ -1,4 +1,4 @@
-.card{
+.card {
   margin: 8px;
   min-width: 298px;
   display: flex;
@@ -10,7 +10,7 @@
   transition: 0.25s;
 
 
-  h1{
+  h1 {
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@
     color: @fontColor;
   }
 
-  .cardWrapper{
+  .cardWrapper {
     min-height: 298px;
     width: 100%;
     display: flex;
@@ -27,12 +27,44 @@
     align-items: center;
     flex-direction: column;
 
-    img{
+    img {
       display: block;
     }
   }
 
-  h1{
+  h1 {
     margin-bottom: 8px;
   }
+}
+
+@keyframes rotate-a {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(-5deg);
+  }
+  75% {
+    transform: rotateZ(5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.cardFlop {
+  &:hover {
+    img {
+      animation: rotate-a 2s infinite ease-in-out forwards;
+      -webkit-animation: rotate-a 2s infinite ease-in-out forwards;
+
+      @media screen and (max-device-width: 600px) {
+        animation: none;
+        -webkit-animation: none;
+      }
+    }
+
+  }
+
+
 }

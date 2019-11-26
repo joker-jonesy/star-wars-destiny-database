@@ -45,48 +45,44 @@ function CardInfo(props) {
             setRst(status);
         }
 
-        const unsubscribe = () => {
 
-            fetch("https://swdestinydb.com/api/public/formats/", {signal: signal})
-                .then(response => {
-                    return response.json();
-                })
-                .then((data) => {
-                    let formats = [];
+        fetch("https://swdestinydb.com/api/public/formats/", {signal: signal})
+            .then(response => {
+                return response.json();
+            })
+            .then((data) => {
+                let formats = [];
 
-                    data.map((fm) => {
+                data.map((fm) => {
 
-                        let format = {
-                            name: fm.name,
-                            restricted: false,
-                            balance: "--",
-                            legal: false
-                        };
+                    let format = {
+                        name: fm.name,
+                        restricted: false,
+                        balance: "--",
+                        legal: false
+                    };
 
-                        if (props.code in fm.data.balance) {
-                            format.balance = fm.data.balance[props.code];
-                        }
+                    if (props.code in fm.data.balance) {
+                        format.balance = fm.data.balance[props.code];
+                    }
 
-                        if (fm.data.restricted.includes(props.code)) {
-                            format.restricted = true;
-                        }
+                    if (fm.data.restricted.includes(props.code)) {
+                        format.restricted = true;
+                    }
 
-                        if (fm.data.sets.includes(props.crd.set_code)) {
-                            format.legal = true;
-                        }
+                    if (fm.data.sets.includes(props.crd.set_code)) {
+                        format.legal = true;
+                    }
 
-                        rendElement({rst: true, load: false, error: false});
+                    rendElement({rst: true, load: false, error: false});
 
 
-                        return formats.push(format);
+                    return formats.push(format);
 
-                    });
+                });
 
-                    handleStatusChange(formats);
-                }).catch(() => rendElement({rst: false, load: false, error: true}))
-        };
-
-        unsubscribe();
+                handleStatusChange(formats);
+            }).catch(() => rendElement({rst: false, load: false, error: true}))
 
 
         return function cleanup() {
@@ -99,7 +95,7 @@ function CardInfo(props) {
             <h3>{fm.name}</h3>
             <h5 className={"restrict"}>{fm.restricted ? "Restricted" : null}</h5>
             <h3>{fm.balance}</h3>
-            <h6>Legal: {fm.legal ? "Playable" : "Unplayable"}</h6>
+            <h6 className={!fm.legal ? "restrict" : null}>{fm.legal ? "Playable" : "Unplayable"}</h6>
         </div>
     );
 
@@ -107,8 +103,10 @@ function CardInfo(props) {
     return (
         <div className={"cardInfo"}>
             <h1>{props.crd.is_unique && "◆ "}{props.crd.name}</h1>
-            {props.crd.health && <h2><FontAwesomeIcon icon={faHeart} size={"lg"} style={{color: "red"}} /> {props.crd.health}</h2>}
-            {props.crd.cost && <h2 className={"cost"}> <span className='icon icon-resource '></span> {props.crd.cost} </h2>}
+            {props.crd.health &&
+            <h2><FontAwesomeIcon icon={faHeart} size={"lg"} style={{color: "red"}}/> {props.crd.health}</h2>}
+            {props.crd.cost &&
+            <h2 className={"cost"}><span className='icon icon-resource '></span> {props.crd.cost} </h2>}
             <h2>{props.crd.points && "Points:"}{props.crd.points}</h2>
             <h2>{props.crd.type_name}</h2>
             <div className={"subtypes"}>{props.crd.subtypes !== undefined && props.crd.subtypes.map((sb, idx) =>
@@ -126,7 +124,8 @@ function CardInfo(props) {
             </div>
             <div className={"text"}>
                 <h3 className={"errata"}>{props.crd.has_errata && "This card has an errata"}</h3>
-                {props.crd.text!==null&&<p dangerouslySetInnerHTML={{__html: props.crd.text.replace("[special]", "<span class='icon" +
+                {props.crd.text !== null && <p dangerouslySetInnerHTML={{
+                    __html: props.crd.text.replace("[special]", "<span class='icon" +
                         " icon-special '></span>").replace("([special])", "(<span class='icon" +
                         " icon-special '></span>)").replace("([indirect])", "(<span class='icon" +
                         " icon-indirect '></span>)").replace("([melee])", "(<span class='icon" +
@@ -159,22 +158,25 @@ function CardInfo(props) {
                         " icon-set-AtG'></span>").replace("[CONV]", "<span class='icon" +
                         " icon-set-CONV'></span>").replace("[AoN]", "<span class='icon" +
                         " icon-set-AoN'></span>").replace("[SoH]", "<span class='icon" +
-                        " icon-set-SoH'></span>")}} className={"effects"}></p>}
+                        " icon-set-SoH'></span>")
+                }} className={"effects"}></p>}
 
-                <i>{props.crd.flavor!==null&& props.crd.flavor.replace("<cite>", "-").replace("</cite>", "")}</i>
+                <i>{props.crd.flavor !== null && props.crd.flavor.replace("<cite>", "-").replace("</cite>", "")}</i>
 
                 <div className={"bottom"}>
-                    <div className={"affl "+props.crd.affiliation_name}>{props.crd.affiliation_name}</div>
+                    <div className={"affl " + props.crd.affiliation_name}>{props.crd.affiliation_name}</div>
 
-                    <div className={"rr "+props.crd.rarity_name}>{props.crd.rarity_name}</div>
+                    <div className={"rr " + props.crd.rarity_name}>{props.crd.rarity_name}</div>
 
-                    <div className={"color" } style={{
-                        backgroundColor:props.crd.faction_code,
-                        color: "black"
+                    <div className={"color"} style={{
+                        backgroundColor: props.crd.faction_code,
+                        color: (props.crd.faction_code==='blue'?'white':'black')
                     }}>
                         {props.crd.faction_code.toUpperCase()}
                     </div>
-                    <div className={"setStuff"}><span className={"icon icon-set-"+props.crd.set_code}></span>{props.crd.set_name}: {props.crd.position}</div>
+                    <div className={"setStuff"}><span
+                        className={"icon icon-set-" + props.crd.set_code}></span>{props.crd.set_name}: {props.crd.position}
+                    </div>
                 </div>
 
 
