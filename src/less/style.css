@@ -72,7 +72,6 @@
 }
 .icon-blank:before {
   content: "\e902";
-  color: #000;
 }
 .icon-discard:before {
   content: "\e903";

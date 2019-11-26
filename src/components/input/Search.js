@@ -4,16 +4,10 @@ import {connect} from 'react-redux';
 
 function Search(props) {
 
-    const [text, setText] = React.useState("");
-
-
     const handleChange = event => {
-        setText(event.target.value);
-        props.setName(text);
+        props.setName(event.target.value);
+
     };
-
-
-
 
     return (
         <input placeholder={"Search for a Card by Name..."} onChange={handleChange} className={"search"}/>

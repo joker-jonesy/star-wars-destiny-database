@@ -21,9 +21,9 @@ function Option (props){
         }
     }
 
-    let values = props.opt.values.map((op, idx)=>
-        <OptionItem key={idx} type={props.opt.type} value={op}/>
-    );
+    let values = props.opt.values.map((op, idx)=> {
+        return <OptionItem key={idx} type={props.opt.type} value={op}/>
+    });
 
     return(
         <div className={"option"}>

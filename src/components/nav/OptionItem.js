@@ -27,7 +27,25 @@ function OptionItem(props) {
     }
 
     const numberCheck = () => {
-        if (isNaN(props.value)) {
+        if(props.value==="RD"){
+            return <span className='icon icon-ranged'></span>
+        }else if(props.value==="Sh"){
+            return <span className='icon icon-shield'></span>
+        }else if(props.value==="MD"){
+            return <span className='icon icon-melee'></span>
+        }else if(props.value==="ID"){
+            return <span className='icon icon-indirect'></span>
+        }else if(props.value==="Dc"){
+            return <span className='icon icon-discard'></span>
+        }else if(props.value==="Dr"){
+            return <span className='icon icon-disrupt'></span>
+        }else if(props.value==="F"){
+            return <span className='icon icon-focus'></span>
+        }else if(props.value==="Sp"){
+            return <span className='icon icon-special'></span>
+        }else if(props.value==="-"){
+            return <span className='icon icon-blank'></span>
+        }else if (isNaN(props.value)) {
             return props.value.charAt(0).toUpperCase() + props.value.substring(1)
         } else {
             return props.value

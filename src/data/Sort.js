@@ -58,6 +58,12 @@ export const Sort = [
         name:"Type",
         type:"type_code",
         values:["character", "upgrade", "support", "event", "downgrade", "plot"]
+    },
+    {
+        name:"Dice Sides",
+        type:"sides",
+        values:["RD", "Sh","MD", "ID", "Dc","Dr", "F", "Sp","-"]
+
     }
 
 ];
