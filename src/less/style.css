@@ -309,6 +309,12 @@ nav svg:active {
   width: 18px;
   border-radius: 18px;
 }
+.options .listOpt .item svg,
+.navOptions .listOpt .item svg,
+.options .styleItem .item svg,
+.navOptions .styleItem .item svg {
+  margin-left: 4px;
+}
 .navOptions {
   box-sizing: border-box;
   overflow: hidden;
@@ -710,11 +716,16 @@ html {
 .button:hover {
   border: 2px solid;
   background-color: white;
-  color: white;
+  color: black;
 }
 .options .button {
   color: black;
   background-color: white;
+}
+.options .button:hover {
+  border: 2px solid;
+  background-color: black;
+  color: white;
 }
 .search {
   height: 40px;

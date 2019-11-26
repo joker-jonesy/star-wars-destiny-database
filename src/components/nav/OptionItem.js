@@ -1,6 +1,9 @@
 import React from 'react';
 import {setSort} from "../../redux/actions/setActions";
 import {connect} from "react-redux";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCheck} from '@fortawesome/free-solid-svg-icons';
+
 
 function OptionItem(props) {
 
@@ -15,14 +18,29 @@ function OptionItem(props) {
     };
 
     if (props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle) {
-        shower = {
-            backgroundColor: props.style.navText,
-            color:props.style.nav
+        if(props.style.navText===undefined){
+            shower = {
+                backgroundColor: 'black',
+                color:'white'
+            }
+        }else{
+            shower = {
+                backgroundColor: props.style.navText,
+                color:props.style.nav
+            }
         }
+
     }else{
-        shower = {
-            backgroundColor: props.style.nav,
-            color:props.style.navText
+        if(props.style.navText===undefined){
+            shower = {
+                backgroundColor: 'white',
+                color:'black'
+            }
+        }else{
+            shower = {
+                backgroundColor: props.style.nav,
+                color:props.style.navText
+            }
         }
     }
 
@@ -56,7 +74,7 @@ function OptionItem(props) {
 
 
     return (
-        <div className={"item"} style={shower} onClick={() => handleSort(props.type, props.value)}>{numberCheck()}</div>
+        <div className={"item"} style={shower} onClick={() => handleSort(props.type, props.value)}>{numberCheck()}  {props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle ? <FontAwesomeIcon icon={faCheck}/> :null}</div>
     );
 
 }
