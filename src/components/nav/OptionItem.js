@@ -7,38 +7,62 @@ import {faCheckSquare, faSquare} from '@fortawesome/free-solid-svg-icons';
 
 function OptionItem(props) {
 
+    const [hover, setHover] = React.useState(false)
+
+    const hoverChange = ()=>{
+        setHover(!hover)
+    };
+
+
+
     let shower;
 
     const handleSort = (prop, val) => {
         props.setSort(prop,  val)
     };
 
-    if (props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle) {
+    if(hover){
         if(props.style.navText===undefined){
             shower = {
-                backgroundColor: 'black',
+                backgroundColor: '#343740',
                 color:'white'
             }
         }else{
             shower = {
-                backgroundColor: props.style.navText,
-                color:props.style.nav
-            }
-        }
-
-    }else{
-        if(props.style.navText===undefined){
-            shower = {
-                backgroundColor: 'white',
-                color:'black'
-            }
-        }else{
-            shower = {
-                backgroundColor: props.style.nav,
+                backgroundColor: props.style.bodyText,
                 color:props.style.navText
             }
         }
+    }else{
+        if (props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle) {
+            if(props.style.navText===undefined){
+                shower = {
+                    backgroundColor: 'black',
+                    color:'white'
+                }
+            }else{
+                shower = {
+                    backgroundColor: props.style.navText,
+                    color:props.style.nav
+                }
+            }
+
+        }else{
+            if(props.style.navText===undefined){
+                shower = {
+                    backgroundColor: 'white',
+                    color:'black'
+                }
+            }else{
+                shower = {
+                    backgroundColor: props.style.nav,
+                    color:props.style.navText
+                }
+            }
+        }
     }
+
+
 
     const numberCheck = () => {
         if(props.value==="RD"){
@@ -72,7 +96,8 @@ function OptionItem(props) {
 
 
     return (
-        <div className={"item"} style={shower} onClick={() => handleSort(props.type, props.value)}>{props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle ? <FontAwesomeIcon icon={faCheckSquare}/> :<FontAwesomeIcon icon={faSquare}/>} {numberCheck()}</div>
+        <div className={"item"} onMouseEnter={hoverChange}
+             onMouseLeave={hoverChange} style={shower} onClick={() => handleSort(props.type, props.value)}>{props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle ? <FontAwesomeIcon icon={faCheckSquare}/> :<FontAwesomeIcon icon={faSquare}/>} {numberCheck()}</div>
     );
 
 }

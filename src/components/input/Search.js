@@ -9,19 +9,26 @@ function Search(props) {
 
     };
 
+    let sty = {
+        backgroundColor: props.style.navText,
+        color: props.style.nav
+    };
+
     return (
-        <input placeholder={"Search for a Card by Name..."} value={props.name} onChange={handleChange} className={"search"}/>
+        <input style={sty} placeholder={"Search Card by Name..."} value={props.name} onChange={handleChange}
+               className={"search"}/>
 
     );
 }
 
 const mapStateToProps = (state) => {
     return {
-        name:state.name
+        name: state.name,
+        style: state.style
     }
 };
 
-const mapDispatchToProps = (dispatch)=>{
+const mapDispatchToProps = (dispatch) => {
     return {
         setName: (name) => {
             dispatch(setName(name))

@@ -13,7 +13,6 @@ function List(props) {
     const [error, setError] = React.useState(false);
 
 
-
     React.useEffect(() => {
 
         function handleStatusChange(status) {
@@ -44,12 +43,23 @@ function List(props) {
 
                     if (p === "points") {
 
-                        for (let i = 0; i < props.sorted.points.val.length; i++) {
-                            sortedList = sortedList.filter(crd => {
 
-                                return (crd.points !== null && crd.points.split("/").includes("" + props.sorted.points.val[i] + "")) ? crd : null
-                            });
-                        }
+                        sortedList = sortedList.filter(crd => {
+                            let ret = false;
+                            if (crd.points !== null) {
+                                let arrayPoints = crd.points.split("/");
+                                for (let i = 0; i < props.sorted.points.val.length; i++) {
+                                    for (let v = 0; v < arrayPoints.length; v++) {
+                                        if (arrayPoints[v] === props.sorted.points.val[i]) {
+
+                                            ret = true;
+                                        }
+                                    }
+                                }
+                            }
+                            return (ret ? crd : null)
+
+                        });
 
 
                     } else if (p === "sides") {
@@ -57,11 +67,11 @@ function List(props) {
                         for (let i = 0; i < props.sorted.sides.val.length; i++) {
 
                             sortedList = sortedList.filter(crd => {
-                                let ret =false;
+                                let ret = false;
                                 if (crd.hasOwnProperty('sides')) {
                                     for (let v = 0; v < crd.sides.length; v++) {
-                                        if(crd.sides[v].includes(props.sorted.sides.val[i])){
-                                           ret=true
+                                        if (crd.sides[v].includes(props.sorted.sides.val[i])) {
+                                            ret = true
                                         }
                                     }
                                 }
@@ -98,7 +108,7 @@ function List(props) {
 
         sortObject();
 
-        return ()=>{
+        return () => {
             sortObject();
         }
 

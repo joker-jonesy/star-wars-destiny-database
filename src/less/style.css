@@ -163,7 +163,6 @@ nav svg {
   transition: 0.15s;
 }
 nav svg:hover {
-  font-size: 36px;
   opacity: 0.75;
 }
 nav svg:active {
@@ -192,6 +191,10 @@ nav svg:active {
   overflow-y: scroll;
   background-color: black;
   color: white;
+}
+.options .option,
+.navOptions .option {
+  cursor: pointer;
 }
 @media screen and (min-width: 600px) {
   .options,
@@ -385,6 +388,7 @@ nav svg:active {
   margin-top: 5px;
   cursor: pointer;
   border: 2px solid;
+  transition: 0.15s;
 }
 .sortNav .itm svg {
   margin: 0 3px;
@@ -472,6 +476,7 @@ html {
   width: 80px;
   border-radius: 80px;
   background-color: white;
+  color: #343740;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -779,7 +784,7 @@ html {
   height: 40px;
   width: 55%;
   outline: none;
-  border: solid 3px #ededed;
+  border: solid 3px;
   border-radius: 10px;
   box-sizing: border-box;
   padding: 8px;

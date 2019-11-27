@@ -21,7 +21,7 @@ function App(props) {
     );
     const [show, updateShow] = React.useState(false);
     const [seconds, setSeconds] = React.useState(0);
-    const [isActive, setIsActive] = React.useState(true);
+    const [isActive] = React.useState(true);
     const [pad, setPad] =React.useState(60);
 
 

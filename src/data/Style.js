@@ -4,20 +4,20 @@ export const Styles = [
         nav:"white",
         body:"black",
         navText:"black",
-        bodyText:"white"
+        bodyText:"#c4c4c4"
     },
     {
         name:"Legacies",
         nav:"red",
         body:"white",
         navText:"white",
-        bodyText:"crimson"
+        bodyText:"#640f18"
     },
     {
         name:"Convergence",
         nav:"#343740",
         body:"#ededed",
         navText:"white",
-        bodyText:"#343740"
+        bodyText:"#666a77"
     }
 ];

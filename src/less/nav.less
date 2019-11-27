@@ -41,7 +41,6 @@ nav {
     transition: 0.15s;
 
     &:hover {
-      font-size: 36px;
       opacity: 0.75;
     }
 
@@ -77,6 +76,10 @@ nav {
   overflow-y: scroll;
   background-color: black;
   color: white;
+
+  .option{
+    cursor: pointer;
+  }
 
   @media screen and (min-width: 600px) {
     width: 400px;
@@ -151,6 +154,9 @@ nav {
     align-items: center;
     flex-direction: column;
     border-bottom: 3px solid;
+
+
+
 
     &:last-child{
       border-bottom: none;
@@ -260,6 +266,7 @@ nav {
     margin-top:5px;
     cursor: pointer;
     border:  2px solid;
+    transition: 0.15s;
 
     svg{
       margin: 0 3px;
