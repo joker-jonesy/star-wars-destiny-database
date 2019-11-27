@@ -341,6 +341,43 @@ nav svg:active {
     border-left: 2px solid;
   }
 }
+.sortNav {
+  min-height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: #8f8f8f;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
+  box-sizing: border-box;
+  padding: 8px;
+  z-index: 98;
+  transition: 0.15s;
+}
+.sortNav .itm {
+  height: 45px;
+  min-width: 80px;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 6px;
+  background-color: #343740;
+  color: white;
+  margin-right: 4px;
+  margin-top: 5px;
+  cursor: pointer;
+  border: 2px solid;
+}
+.sortNav .itm svg {
+  margin: 0 3px;
+}
 * {
   margin: 0;
 }

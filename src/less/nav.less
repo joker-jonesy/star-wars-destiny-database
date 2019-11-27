@@ -215,3 +215,44 @@ nav {
     border-left: 2px solid;
   }
 }
+
+.sortNav{
+  min-height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: @menubackground;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content:space-between;
+  box-sizing: border-box;
+  padding: 8px;
+  z-index: 98;
+  transition: 0.15s;
+
+  .itm{
+    height: 45px;
+    min-width: 80px;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 6px;
+    background-color: @fontColor;
+    color: white;
+    margin-right: 4px;
+    margin-top:5px;
+    cursor: pointer;
+    border:  2px solid;
+
+    svg{
+      margin: 0 3px;
+    }
+  }
+
+}

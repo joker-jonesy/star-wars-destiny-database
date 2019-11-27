@@ -61,6 +61,8 @@ function OptionItem(props) {
             return <span><span className='icon icon-focus'></span> Focus</span>
         }else if(props.value==="Sp"){
             return <span><span className='icon icon-special'></span> Special</span>
+        }else if(props.value==="R"){
+            return <span><span className='icon icon-resource'></span> Resource</span>
         }else if(props.value==="-"){
             return <span><span className='icon icon-blank'></span> Blank</span>
         }else if(props.value==="+"){

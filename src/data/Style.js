@@ -11,7 +11,7 @@ export const Styles = [
         nav:"red",
         body:"white",
         navText:"white",
-        bodyText:"red"
+        bodyText:"crimson"
     },
     {
         name:"Convergence",

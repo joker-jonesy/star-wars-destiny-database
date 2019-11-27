@@ -62,7 +62,7 @@ export const Sort = [
     {
         name:"Dice Sides",
         type:"sides",
-        values:["RD", "Sh","MD", "ID", "Dc","Dr", "F", "Sp","-","+"]
+        values:["RD", "Sh","MD", "ID", "Dc","Dr", "F", "R", "Sp","-","+"]
 
     }
 
