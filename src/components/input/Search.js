@@ -10,17 +10,14 @@ function Search(props) {
     };
 
     return (
-        <input placeholder={"Search for a Card by Name..."} onChange={handleChange} className={"search"}/>
+        <input placeholder={"Search for a Card by Name..."} value={props.name} onChange={handleChange} className={"search"}/>
 
     );
 }
 
 const mapStateToProps = (state) => {
     return {
-        displayedSet: state.displayedSet,
-        itemLimit: state.itemLimit,
-        setLimit: state.setLimit,
-        sorted:state.sorted
+        name:state.name
     }
 };
 

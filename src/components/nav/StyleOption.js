@@ -8,13 +8,13 @@ function StyleOption(props) {
 
     if(props.opt.name===props.style.name){
         active={
-            backgroundColor:props.style.nav,
-            color:props.style.navText
+            backgroundColor:props.style.navText,
+            color:props.style.nav
         }
     }else{
         active={
-            backgroundColor:props.style.navText,
-            color:props.style.nav
+            backgroundColor:props.style.nav,
+            color:props.style.navText
         }
     }
 

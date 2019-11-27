@@ -197,6 +197,7 @@ nav svg:active {
   .options,
   .navOptions {
     width: 400px;
+    border-left: solid 6px;
   }
 }
 .options .wrapper,
@@ -204,7 +205,7 @@ nav svg:active {
   width: 100%;
   min-height: 100%;
   position: absolute;
-  top: 150px;
+  top: 140px;
   left: 0;
 }
 .options .button,
@@ -294,12 +295,19 @@ nav svg:active {
   border-bottom: 2px solid;
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 .options .listOpt .item:last-child,
 .navOptions .listOpt .item:last-child,
 .options .styleItem .item:last-child,
 .navOptions .styleItem .item:last-child {
   border-bottom: none;
+}
+.options .listOpt .item:first-child,
+.navOptions .listOpt .item:first-child,
+.options .styleItem .item:first-child,
+.navOptions .styleItem .item:first-child {
+  border-top: 3px solid;
 }
 .options .listOpt .item .active,
 .navOptions .listOpt .item .active,
@@ -313,7 +321,7 @@ nav svg:active {
 .navOptions .listOpt .item svg,
 .options .styleItem .item svg,
 .navOptions .styleItem .item svg {
-  margin-left: 4px;
+  margin: 0 6px 0 0;
 }
 .navOptions {
   box-sizing: border-box;
@@ -332,6 +340,9 @@ nav svg:active {
   font-size: 21px;
   font-weight: 500;
   cursor: pointer;
+}
+.navOptions .item svg {
+  margin: 0 3px;
 }
 .options {
   box-sizing: border-box;

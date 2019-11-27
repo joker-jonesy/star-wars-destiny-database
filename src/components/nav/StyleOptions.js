@@ -10,14 +10,14 @@ function StyleOptions(props) {
     if (props.styles) {
         show={
             "right":"0",
-            backgroundColor:props.style.nav,
-            color:props.style.navText
+            backgroundColor:props.style.navText,
+            color:props.style.nav
         }
     }else{
         show={
             "right":"-100%",
-            backgroundColor:props.style.nav,
-            color:props.style.navText
+            backgroundColor:props.style.navText,
+            color:props.style.nav
         }
     }
 
@@ -28,7 +28,7 @@ function StyleOptions(props) {
 
     return (
         <div className={"navOptions"} style={show}>
-            <div className={"top"}><h1 style={{color:props.style.navText}}>Change Style</h1></div>
+            <div className={"top"}><h1 style={{color:props.style.nav}}>Change Style</h1></div>
             <div className={"wrapper"}>
                 {styles}
             </div>

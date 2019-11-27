@@ -11,11 +11,10 @@ export const setName = (name) => {
     }
 };
 
-export const setSort = (prop, toggle, val) => {
+export const setSort = (prop, val) => {
     return {
         type: 'SET_SORT',
         prop: prop,
-        toggle: toggle,
         val: val
     }
 };

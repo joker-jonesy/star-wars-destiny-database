@@ -8,12 +8,9 @@ import {setSort} from "../../redux/actions/setActions";
 function SortTag(props){
     const [hover, setHover] = React.useState(false);
 
-    const toggleReturn = (prop, val) => {
-        return !(props.sorted[prop].toggle && props.sorted[prop].val === val);
-    };
 
     const handleSort = (prop, val) => {
-        props.setSort(prop, toggleReturn(prop, val), val)
+        props.setSort(prop, val)
     };
 
     let style;
@@ -85,8 +82,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setSort: (prop, toggle, val) => {
-            dispatch(setSort(prop, toggle, val))
+        setSort: (prop, val) => {
+            dispatch(setSort(prop,  val))
         }
     }
 };

@@ -2,19 +2,15 @@ import React from 'react';
 import {setSort} from "../../redux/actions/setActions";
 import {connect} from "react-redux";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCheck} from '@fortawesome/free-solid-svg-icons';
+import {faCheckSquare, faSquare} from '@fortawesome/free-solid-svg-icons';
 
 
 function OptionItem(props) {
 
     let shower;
 
-    const toggleReturn = (prop, val) => {
-        return !(props.sorted[prop].toggle && props.sorted[prop].val === val);
-    };
-
     const handleSort = (prop, val) => {
-        props.setSort(prop, toggleReturn(prop, val), val)
+        props.setSort(prop,  val)
     };
 
     if (props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle) {
@@ -76,7 +72,7 @@ function OptionItem(props) {
 
 
     return (
-        <div className={"item"} style={shower} onClick={() => handleSort(props.type, props.value)}>{numberCheck()}  {props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle ? <FontAwesomeIcon icon={faCheck}/> :null}</div>
+        <div className={"item"} style={shower} onClick={() => handleSort(props.type, props.value)}>{props.sorted[props.type].val.includes(props.value) && props.sorted[props.type].toggle ? <FontAwesomeIcon icon={faCheckSquare}/> :<FontAwesomeIcon icon={faSquare}/>} {numberCheck()}</div>
     );
 
 }
@@ -90,8 +86,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setSort: (prop, toggle, val) => {
-            dispatch(setSort(prop, toggle, val))
+        setSort: (prop, val) => {
+            dispatch(setSort(prop, val))
         }
     }
 };

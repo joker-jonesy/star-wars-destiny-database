@@ -1,5 +1,3 @@
-
-
 const initState = {
     itemLimit: 10,
     sorted:{
@@ -119,7 +117,8 @@ const rootReducer = (state = initState, action) => {
                 sides:{toggle: false, val:[]}
             },
             name: "",
-            options:false
+            options:false,
+            styles:false
         }
     }
 
