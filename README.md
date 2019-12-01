@@ -13,19 +13,15 @@ The goal with this application is to make card searching much more efficient by 
 * Point Value
 * Rarity
 * Name
+* Dice Sides
 
 ## Planned Sorting Methods
 * Formats (Standard, Trilogy, Infinite)
 * Erratas
-* Dice Sides
+* Balance of the Force
 * Tagging (Users can tag cards and search for a card by a tag, such as healing, damage, mill, etc.)
 
 ## Planned Features
-* Allow users to select theme of the website based on the current trilogy set
-* Show current sorting metods using iconography
-* Tagging System (See above)
-* Various bug Fixes
-* Mobile Friendly
-
+None at this time
 
 Feel free to report issues with the application here on GitHub!
