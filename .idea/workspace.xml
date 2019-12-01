@@ -2,28 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c786f6e1-bbd5-4088-be44-1cdc1b091e07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.d247d95c2785bd472cfd426d87c1e78b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.ac66e1d3.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.ac66e1d3.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.55ff818a.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.55ff818a.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.48409627.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.48409627.chunk.js.map" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/Formats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/awakeningslogo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/awakeningslogo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/convergencelogo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/convergencelogo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/swdestiny.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/swdestiny.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/swdestiny.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/swdestiny.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/swdestiny.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/swdestiny.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/swdestiny.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/swdestiny.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/legacies.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/legacies.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/legacieslogo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/legacieslogo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/loho.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/loho.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CardInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/Side.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/Side.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/input/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/Option.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/Option.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/OptionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/OptionItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/SortNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/SortNav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/SortTag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/SortTag.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/StyleOption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/StyleOption.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/StyleOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/StyleOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Sort.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/Style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/card.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/card.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/card.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/card.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/fonts.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/fonts.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/fonts.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/fonts.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/input.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/input.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/input.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/input.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/list.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/list.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/list.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/main.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/mixins.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/nav.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/nav.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/setActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/setActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,56 +71,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.9">
+    <splitter split-orientation="horizontal" split-proportion="0.64275324">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/data/Style.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/App.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="213">
-                  <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/less/card.less">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1112">
-                  <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/less/main.less">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/main/List.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="560">
-                  <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+                <state relative-caret-position="678">
+                  <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/data/Sort.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="783">
+                  <caret line="87" selection-start-line="87" selection-end-line="87" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/data/Formats.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -101,7 +116,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/nav/StyleOptions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="548">
+                <state relative-caret-position="891">
                   <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -113,7 +128,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/nav/StyleOption.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="310">
+                <state relative-caret-position="1452">
                   <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -138,15 +153,19 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="495">
+                  <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/nav/SortNav.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1282">
+                <state relative-caret-position="1683">
                   <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -158,8 +177,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/redux/actions/setActions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="66">
-                  <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+                <state relative-caret-position="1089">
+                  <caret line="33" selection-start-line="33" selection-end-line="34" />
                 </state>
               </provider>
             </entry>
@@ -167,7 +186,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/less/input.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="520">
+                <state relative-caret-position="1551">
                   <caret line="47" selection-start-line="47" selection-end-line="48" />
                 </state>
               </provider>
@@ -186,30 +205,18 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/card/CardPage.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1452">
-                  <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/less/nav.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="498">
+                <state relative-caret-position="8844">
                   <caret line="268" column="21" selection-start-line="268" selection-start-column="21" selection-end-line="268" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/nav/SortTag.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="9">
+                <state relative-caret-position="33">
                   <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -221,8 +228,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/nav/OptionItem.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="337">
-                  <caret line="99" column="39" selection-start-line="98" selection-start-column="32" selection-end-line="99" selection-end-column="39" />
+                <state relative-caret-position="241">
+                  <caret line="49" selection-start-line="49" selection-end-line="50" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -271,12 +278,8 @@
         <option value="$PROJECT_DIR$/src/components/card/CardPage.js" />
         <option value="$PROJECT_DIR$/src/components/input/Button.js" />
         <option value="$PROJECT_DIR$/src/less/card.less" />
-        <option value="$PROJECT_DIR$/src/components/card/CardInfo.js" />
-        <option value="$PROJECT_DIR$/src/data/Sort.js" />
         <option value="$PROJECT_DIR$/src/components/nav/SortNav.js" />
         <option value="$PROJECT_DIR$/src/components/nav/StyleOptions.js" />
-        <option value="$PROJECT_DIR$/src/redux/actions/setActions.js" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/less/main.less" />
         <option value="$PROJECT_DIR$/src/components/nav/OptionItem.js" />
         <option value="$PROJECT_DIR$/src/data/Style.js" />
@@ -286,6 +289,11 @@
         <option value="$PROJECT_DIR$/src/components/input/Search.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/nav/SortTag.js" />
+        <option value="$PROJECT_DIR$/src/redux/actions/setActions.js" />
+        <option value="$PROJECT_DIR$/src/data/Formats.js" />
+        <option value="$PROJECT_DIR$/src/components/card/CardInfo.js" />
+        <option value="$PROJECT_DIR$/src/data/Sort.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/main/List.js" />
       </list>
     </option>
@@ -312,18 +320,7 @@
             <path>
               <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
               <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
@@ -342,47 +339,13 @@
               <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
               <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="nav" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
               <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="less" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="redux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="star-wars-destiny-database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="star-wars-destiny-database" type="b2602c69:ProjectViewProjectNode" />
@@ -413,6 +376,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/assets/fonts" />
     </key>
   </component>
@@ -452,17 +416,19 @@
       <workItem from="1574698851891" duration="4058000" />
       <workItem from="1574720208386" duration="459000" />
       <workItem from="1574783578484" duration="20070000" />
-      <workItem from="1574889524407" duration="6489000" />
+      <workItem from="1574889524407" duration="7130000" />
+      <workItem from="1575217080930" duration="6227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82531000" />
+    <option name="totallyTimeSpent" value="89399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="45" width="2536" height="1342" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21630219" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17972167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -476,7 +442,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28363046" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22447325" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -571,16 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CardInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4389">
-          <caret line="136" column="77" selection-start-line="136" selection-start-column="77" selection-end-line="137" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/card/Side.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -598,47 +554,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CardPage.js">
+    <entry file="file://$PROJECT_DIR$/src/data/Style.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="231">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/nav/StyleOptions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/setActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/card.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1112">
-          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -649,17 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/Style.js">
+    <entry file="file://$PROJECT_DIR$/src/components/nav/StyleOptions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/nav/OptionItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="99" column="39" selection-start-line="98" selection-start-column="32" selection-end-line="99" selection-end-column="39" />
+        <state relative-caret-position="891">
+          <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -668,18 +590,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/nav/StyleOption.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="1452">
           <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/nav.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="268" column="21" selection-start-line="268" selection-start-column="21" selection-end-line="268" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -693,10 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/components/nav/SortNav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="1683">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -705,25 +620,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/input.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
+        <state relative-caret-position="1551">
           <caret line="47" selection-start-line="47" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/nav/SortNav.js">
+    <entry file="file://$PROJECT_DIR$/src/less/nav.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1282">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        <state relative-caret-position="8844">
+          <caret line="268" column="21" selection-start-line="268" selection-start-column="21" selection-end-line="268" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav/SortTag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/Sort.js">
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/setActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="951">
-          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+        <state relative-caret-position="1089">
+          <caret line="33" selection-start-line="33" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav/OptionItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="49" selection-start-line="49" selection-end-line="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/Formats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CardPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CardInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/card.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -737,20 +710,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/nav/SortTag.js">
+    <entry file="file://$PROJECT_DIR$/src/data/Sort.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="783">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main/List.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+        <state relative-caret-position="678">
+          <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

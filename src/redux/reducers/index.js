@@ -9,7 +9,11 @@ const initState = {
         health: {toggle: false, val: []},
         cost: {toggle: false, val: []},
         points: {toggle: false, val: []},
-        sides:{toggle: false, val:[]}
+        sides:{toggle: false, val:[]},
+        formats:{toggle:false, val:[]},
+        restricted:{toggle:false,val:[]},
+        balanced:{toggle:false,val:[]},
+        keywords:{toggle:false,val:[]}
     },
     style:JSON.parse(localStorage.getItem('localStyle')) || '',
     name: "",
@@ -114,7 +118,11 @@ const rootReducer = (state = initState, action) => {
                 health: {toggle: false, val: []},
                 cost: {toggle: false, val: []},
                 points: {toggle: false, val: []},
-                sides:{toggle: false, val:[]}
+                sides:{toggle: false, val:[]},
+                formats:{toggle:false, val:[]},
+                restricted:{toggle:false,val:[]},
+                balanced:{toggle:false,val:[]},
+                keywords:{toggle:false,val:[]}
             },
             name: "",
             options:false,

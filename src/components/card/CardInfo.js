@@ -51,7 +51,7 @@ function CardInfo(props) {
                 return response.json();
             })
             .then((data) => {
-                let formats = [];
+                let formatSet = [];
 
                 data.map((fm) => {
 
@@ -77,11 +77,11 @@ function CardInfo(props) {
                     rendElement({rst: true, load: false, error: false});
 
 
-                    return formats.push(format);
+                    return formatSet.push(format);
 
                 });
 
-                handleStatusChange(formats);
+                handleStatusChange(formatSet);
             }).catch(() => rendElement({rst: false, load: false, error: true}))
 
 

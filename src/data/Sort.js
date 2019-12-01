@@ -64,6 +64,26 @@ export const Sort = [
         type:"sides",
         values:["RD", "Sh","MD", "ID", "Dc","Dr", "F", "R", "Sp","-","+"]
 
+    },
+    {
+        name:"Formats",
+        type:"formats",
+        values:["Standard", "Trilogy", "Infinite"]
+    },
+    {
+        name: "Restricted",
+        type:"restricted",
+        values:["restricted"]
+    },
+    {
+        name: "Balanced",
+        type:"balanced",
+        values:["balanced"]
+    },
+    {
+        name: "Keywords",
+        type:"keywords",
+        values:["Guardian", "Ambush", "Redeploy"]
     }
 
 ];
