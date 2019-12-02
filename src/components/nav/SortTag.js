@@ -68,6 +68,7 @@ function SortTag(props){
     };
 
     let text = (vl)=>{
+
         if(vl.includes("H")){
             return Number(vl.substring(0, vl.length - 1));
         }else if(vl.includes("P")){
@@ -80,7 +81,8 @@ function SortTag(props){
     };
 
     return (
-        <div className={"itm"} onClick={()=>handleSort(props.prp,text(props.val))} style={style} onMouseEnter={hoverChange}
+        <div className={"itm"} onClick={()=>handleSort(props.prp,(props.prp==="set_name"?props.val:text(props.val)))}
+            style={style} onMouseEnter={hoverChange}
              onMouseLeave={hoverChange}>{numberCheck(props.val)} <FontAwesomeIcon icon={faTimes}/></div>
     )
 }
