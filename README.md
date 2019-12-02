@@ -14,11 +14,12 @@ The goal with this application is to make card searching much more efficient by 
 * Rarity
 * Name
 * Dice Sides
+* Formats
+* Balance of the Force
+* Restricted
+* Keywords
 
 ## Planned Sorting Methods
-* Formats (Standard, Trilogy, Infinite)
-* Erratas
-* Balance of the Force
 * Tagging (Users can tag cards and search for a card by a tag, such as healing, damage, mill, etc.)
 
 ## Planned Features
