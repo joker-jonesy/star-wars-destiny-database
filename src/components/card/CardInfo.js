@@ -105,7 +105,7 @@ function CardInfo(props) {
             <h1>{props.crd.is_unique && "◆ "}{props.crd.name}</h1>
             {props.crd.health &&
             <h2><FontAwesomeIcon icon={faHeart} size={"lg"} style={{color: "red"}}/> {props.crd.health}</h2>}
-            {props.crd.cost &&
+            {props.crd.cost!==null &&
             <h2 className={"cost"}><span className='icon icon-resource '></span> {props.crd.cost} </h2>}
             <h2>{props.crd.points && "Points:"}{props.crd.points}</h2>
             <h2>{props.crd.type_name}</h2>

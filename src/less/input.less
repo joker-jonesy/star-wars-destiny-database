@@ -35,7 +35,7 @@
 
 .search {
   height: 40px;
-  width: 55%;
+  width: 100%;
 
   outline: none;
   border: solid 3px;
@@ -45,12 +45,29 @@
   font-size: 21px;
 
   @media screen and (max-device-width: 600px) {
-    width: 47%;
     font-size: 12px;
     padding: 6px;
   }
 
+
+}
+
+.searchContainer{
+  position: relative;
+  width: 55%;
+
+  @media screen and (max-device-width: 600px) {
+    width: 47%;
+  }
+
   @media screen and (min-width: 700px) {
     width: 500px;
+  }
+
+  svg{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
   }
 }

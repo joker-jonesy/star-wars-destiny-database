@@ -83,7 +83,7 @@ function SortTag(props){
     return (
         <div className={"itm"} onClick={()=>handleSort(props.prp,(props.prp==="set_name"?props.val:text(props.val)))}
             style={style} onMouseEnter={hoverChange}
-             onMouseLeave={hoverChange}>{numberCheck(props.val)} <FontAwesomeIcon icon={faTimes}/></div>
+             onMouseLeave={hoverChange}>{(props.prp==="set_name"?props.val:numberCheck(props.val))} <FontAwesomeIcon icon={faTimes}/></div>
     )
 }
 

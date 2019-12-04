@@ -44,3 +44,24 @@ export const clearOptions = () =>{
         type: 'CLEAR_OPTIONS'
     }
 };
+
+export const setCards = (cards) =>{
+    return {
+        type: 'SET_CARDS',
+        cards:cards
+    }
+};
+
+export const setFormats = (fmts) =>{
+    return {
+        type: 'SET_FORMATS',
+        fmts:fmts
+    }
+};
+
+export const setSets = (sts) =>{
+    return {
+        type: 'SET_SETS',
+        sts:sts
+    }
+};

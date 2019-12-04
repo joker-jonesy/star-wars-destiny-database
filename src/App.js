@@ -6,7 +6,11 @@ import Nav from './components/nav/Navigation';
 import Options from './components/nav/options';
 import SortNav from './components/nav/SortNav'
 import StyleOptions from './components/nav/StyleOptions';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faSpinner, faExclamationCircle} from '@fortawesome/free-solid-svg-icons';
+
 import {connect} from 'react-redux';
+import {setCards, setFormats, setSets} from "./redux/actions/setActions";
 
 import {
     Switch,
@@ -14,24 +18,59 @@ import {
 } from "react-router-dom";
 
 
+
 function App(props) {
 
-    const [style, setValue] = React.useState(
-        JSON.parse(localStorage.getItem('localStyle')) || ''
-    );
     const [show, updateShow] = React.useState(false);
     const [seconds, setSeconds] = React.useState(0);
-    const [isActive] = React.useState(true);
-    const [pad, setPad] =React.useState(60);
+    const [pad, setPad] = React.useState(60);
+    // const [load, setLoad] =React.useState("load");
 
 
     React.useEffect(() => {
         localStorage.setItem('localStyle', JSON.stringify(props.style));
-        setValue(props.style);
-
-
-
-
+        // let loadCards="load";
+        // let loadFormats="load";
+        // let loadSets="load";
+        //
+        // fetch("https://swdestinydb.com/api/public/cards/")
+        //     .then(response => {
+        //         return response.json();
+        //     })
+        //     .then((data) => {
+        //         loadCards="loaded";
+        //         props.setCards(data);
+        //     }).catch(function () {
+        //     loadCards="error";
+        // });
+        //
+        // fetch("https://swdestinydb.com/api/public/formats/")
+        //     .then(response => {
+        //         return response.json();
+        //     })
+        //     .then((data) => {
+        //         loadFormats="loaded";
+        //         props.setFormats(data);
+        //     }).catch(function () {
+        //     loadCards="error";
+        // });
+        //
+        // fetch("https://swdestinydb.com/api/public/sets/")
+        //     .then(response => {
+        //         return response.json();
+        //     })
+        //     .then((data) => {
+        //         loadSets="loaded";
+        //         props.setSets(data);
+        //     }).catch(function () {
+        //     loadCards="error";
+        // });
+        //
+        // if(loadCards==="loaded"&&loadFormats==="loaded"&&loadSets==="loaded"){
+        //     setLoad("loaded")
+        // }else if(loadCards==="error"||loadFormats==="error"||loadSets==="error"){
+        //     setLoad("error");
+        // }
 
         let check = false;
 
@@ -39,39 +78,47 @@ function App(props) {
             if (props.sorted[p].toggle) {
                 check = true;
             }
-
         }
 
         updateShow(check);
 
         let interval = null;
-        if (isActive) {
-            interval = setInterval(() => {
-                setSeconds(seconds => seconds + 1);
-            }, 500);
-        } else if (!isActive && seconds !== 0) {
-            clearInterval(interval);
-        }
-        setPad(document.querySelector(".sortNav").getBoundingClientRect().height);
+
+        interval = setInterval(() => {
+            setSeconds(seconds => seconds + 1);
+        }, 500);
+
+        // if(load==="loaded"){
+            setPad(document.querySelector(".sortNav").getBoundingClientRect().height);
+
+            document.documentElement.style.backgroundColor = props.style.body;
+        // }
+
+
         return () => clearInterval(interval);
 
-    }, [props.style, style, props.sorted, seconds, isActive]);
+    }, [props.style, props.sorted, seconds]);
 
+    let appStyle = {
+        backgroundColor: props.style.body
+    };
 
-    document.documentElement.style.backgroundColor = props.style.body;
+    let wrapStyle = {
+        color: props.style.bodyText,
+        backgroundColor: props.style.body,
+        paddingTop: (show ? "" + pad + "px" : "0")
+    };
 
     return (
 
-        <div className="App" style={{backgroundColor: style.body}}>
+        <div className="App" style={appStyle}>
+            {/*{load==="loaded"&&<span><Nav/> <SortNav/> <Options/> <StyleOptions/> <div className={"mainWrapper"} style={wrapStyle}><Switch><Route path="/" component={List}/></Switch></div><Route path={"/:id"} component={CardPage}/></span>}*/}
+            {/*{load==="load"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.style.bodyText}}/></div>}*/}
             <Nav/>
             <SortNav/>
             <Options/>
             <StyleOptions/>
-            <div className={"mainWrapper"} style={{
-                color: style.bodyText,
-                backgroundColor: props.style.body,
-                paddingTop: (show ? "" + pad + "px" : "0")
-            }}>
+            <div className={"mainWrapper"} style={wrapStyle}>
                 <Switch>
                     <Route path="/" component={List}/>
                 </Switch>
@@ -88,5 +135,19 @@ const mapStateToProps = (state) => {
     }
 };
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setCards: (crds) => {
+            dispatch(setCards(crds))
+        },
+        setFormats: (fmts) => {
+            dispatch(setFormats(fmts))
+        },
+        setSets: (sts) => {
+            dispatch(setSets(sts))
+        },
+    }
+};
 
-export default connect(mapStateToProps)(App);
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

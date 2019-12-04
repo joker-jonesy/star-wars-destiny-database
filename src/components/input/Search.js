@@ -1,6 +1,8 @@
 import React from 'react';
 import {setName} from "../../redux/actions/setActions";
 import {connect} from 'react-redux';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
 function Search(props) {
 
@@ -14,9 +16,16 @@ function Search(props) {
         color: props.style.nav
     };
 
+    let sg  ={
+        color: props.style.nav
+    };
+
     return (
-        <input style={sty} placeholder={"Search Card by Name..."} value={props.name} onChange={handleChange}
+        <div className={"searchContainer"}>
+            <input style={sty} placeholder={"Search Card by Name..."} value={props.name} onChange={handleChange}
                className={"search"}/>
+               <FontAwesomeIcon style={sg} icon={faTimes} onClick={()=> props.setName("")}/>
+        </div>
 
     );
 }

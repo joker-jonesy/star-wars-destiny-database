@@ -210,7 +210,8 @@ const mapStateToProps = (state) => {
         setLimit: state.setLimit,
         sorted: state.sorted,
         name: state.name,
-        style: state.style
+        style: state.style,
+        cards:state.cards
     }
 };
 

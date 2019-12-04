@@ -87,7 +87,8 @@ function CardPage(props) {
 
 const mapStateToProps = (state) => {
     return {
-        style: state.style
+        style: state.style,
+        cards:state.cards
     }
 };
 

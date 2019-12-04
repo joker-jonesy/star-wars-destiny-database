@@ -1,4 +1,7 @@
 const initState = {
+    cards:[],
+    formats:[],
+    sets:[],
     itemLimit: 10,
     sorted:{
         rarity_name: {toggle: false, val: []},
@@ -127,6 +130,27 @@ const rootReducer = (state = initState, action) => {
             name: "",
             options:false,
             styles:false
+        }
+    }
+
+    if(action.type === 'SET_CARDS'){
+        return{
+            ...state,
+            cards:action.cards
+        }
+    }
+
+    if(action.type === 'SET_FORMATS'){
+        return{
+            ...state,
+            formats:action.fmts
+        }
+    }
+
+    if(action.type === 'SET_SETS'){
+        return{
+            ...state,
+            sets:action.sts
         }
     }
 
