@@ -33,6 +33,43 @@
   }
 }
 
+.search.Awakenings::placeholder {
+  color: white;
+}
+
+.search.Legacies::placeholder {
+  color: red;
+}
+
+.search.Convergence::placeholder {
+  color: @fontColor;
+}
+
+.search.Awakenings:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.search.Awakenings::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+.search.Legacies:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+.search.Legacies::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+.search.Convergence:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: @fontColor;
+}
+
+.search.Convergence::-ms-input-placeholder { /* Microsoft Edge */
+  color: @fontColor;
+}
+
+
 .search {
   height: 40px;
   width: 100%;
@@ -48,6 +85,8 @@
     font-size: 12px;
     padding: 6px;
   }
+
+
 
 
 }

@@ -13,18 +13,19 @@ function Search(props) {
 
     let sty = {
         backgroundColor: props.style.navText,
-        color: props.style.nav
+        color: props.style.nav,
+
     };
 
-    let sg  ={
+    let sg = {
         color: props.style.nav
     };
 
     return (
         <div className={"searchContainer"}>
             <input style={sty} placeholder={"Search Card by Name..."} value={props.name} onChange={handleChange}
-               className={"search"}/>
-               <FontAwesomeIcon style={sg} icon={faTimes} onClick={()=> props.setName("")}/>
+                   className={"search "+props.style.name}/>
+            <FontAwesomeIcon style={sg} icon={faTimes} onClick={() => props.setName("")}/>
         </div>
 
     );
