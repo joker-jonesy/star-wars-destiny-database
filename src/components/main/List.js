@@ -4,38 +4,20 @@ import Card from '../card/Card';
 import {connect} from 'react-redux';
 import Button from '../input/Button';
 import {Link} from 'react-router-dom';
-import {formats} from '../../data/Formats';
 
 function List(props) {
 
-    const [cards, setCards] = React.useState([]);
     const [sort, setSort] = React.useState([]);
-    const [load, setLoad] = React.useState(true);
-    const [error, setError] = React.useState(false);
+    const [load] = React.useState(true);
+    const [error] = React.useState(false);
 
 
     React.useEffect(() => {
 
-        function handleStatusChange(status) {
-            setCards(status)
-        }
-
-        if (load) {
-            fetch("https://swdestinydb.com/api/public/cards/")
-                .then(response => {
-                    return response.json();
-                })
-                .then((data) => {
-                    setLoad(false);
-                    handleStatusChange(data);
-                }).catch(function () {
-                setError(true);
-            });
-        }
 
         function sortObject() {
 
-            let sortedList = cards;
+            let sortedList = props.cards;
 
             for (let p in props.sorted) {
 
@@ -85,9 +67,9 @@ function List(props) {
                     } else if (p === 'formats') {
                         sortedList = sortedList.filter(crd => {
                             let ret = false;
-                            for (let i = 0; i < formats.length; i++) {
+                            for (let i = 0; i < props.formats.length; i++) {
                                 for (let q = 0; q < props.sorted.formats.val.length; q++) {
-                                    if (formats[i].name === props.sorted.formats.val[q] && formats[i].data.sets.includes(crd.set_code)) {
+                                    if (props.formats[i].name === props.sorted.formats.val[q] && props.formats[i].data.sets.includes(crd.set_code)) {
                                         ret = true;
                                     }
                                 }
@@ -97,9 +79,9 @@ function List(props) {
                     }else if (p === 'restricted') {
                         sortedList = sortedList.filter(crd => {
                             let ret = false;
-                            for(let y=0; y<formats.length; y++){
-                                for (let i = 0; i < formats[y].data.restricted.length; i++) {
-                                    if(formats[y].data.restricted[i]===crd.code&&props.sorted.restricted.val.includes("restricted")){
+                            for(let y=0; y<props.formats.length; y++){
+                                for (let i = 0; i < props.formats[y].data.restricted.length; i++) {
+                                    if(props.formats[y].data.restricted[i]===crd.code&&props.sorted.restricted.val.includes("restricted")){
                                         ret=true
                                     }
                                 }
@@ -110,8 +92,8 @@ function List(props) {
                     }else if (p === 'balanced') {
                         sortedList = sortedList.filter(crd => {
                             let ret = false;
-                            for(let y=0; y<formats.length; y++){
-                                for (let i in formats[y].data.balance) {
+                            for(let y=0; y<props.formats.length; y++){
+                                for (let i in props.formats[y].data.balance) {
                                     if(i===crd.code&&props.sorted.balanced.val.includes("balanced")){
                                         ret=true
                                     }
@@ -161,7 +143,7 @@ function List(props) {
             sortObject();
         }
 
-    }, [cards, load, props.name, props.sorted]);
+    }, [load, props.name, props.sorted, props.cards, props.formats]);
 
 
     let cardEle;
@@ -211,7 +193,8 @@ const mapStateToProps = (state) => {
         sorted: state.sorted,
         name: state.name,
         style: state.style,
-        cards:state.cards
+        cards:state.cards,
+        formats:state.formats
     }
 };
 

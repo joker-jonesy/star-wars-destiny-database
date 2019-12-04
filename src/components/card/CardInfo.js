@@ -2,6 +2,7 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSpinner, faExclamationCircle, faHeart} from '@fortawesome/free-solid-svg-icons';
 import Side from './Side';
+import {connect} from 'react-redux';
 
 
 function CardInfo(props) {
@@ -37,58 +38,46 @@ function CardInfo(props) {
 
     React.useEffect(() => {
 
-        const abortController = new AbortController();
-        const signal = abortController.signal;
-
 
         function handleStatusChange(status) {
             setRst(status);
         }
 
 
-        fetch("https://swdestinydb.com/api/public/formats/", {signal: signal})
-            .then(response => {
-                return response.json();
-            })
-            .then((data) => {
-                let formatSet = [];
+        let formatSet = [];
 
-                data.map((fm) => {
+        props.formats.map((fm) => {
 
-                    let format = {
-                        name: fm.name,
-                        restricted: false,
-                        balance: "--",
-                        legal: false
-                    };
+            let format = {
+                name: fm.name,
+                restricted: false,
+                balance: "--",
+                legal: false
+            };
 
-                    if (props.code in fm.data.balance) {
-                        format.balance = fm.data.balance[props.code];
-                    }
+            if (props.code in fm.data.balance) {
+                format.balance = fm.data.balance[props.code];
+            }
 
-                    if (fm.data.restricted.includes(props.code)) {
-                        format.restricted = true;
-                    }
+            if (fm.data.restricted.includes(props.code)) {
+                format.restricted = true;
+            }
 
-                    if (fm.data.sets.includes(props.crd.set_code)) {
-                        format.legal = true;
-                    }
+            if (fm.data.sets.includes(props.crd.set_code)) {
+                format.legal = true;
+            }
 
-                    rendElement({rst: true, load: false, error: false});
+            rendElement({rst: true, load: false, error: false});
 
 
-                    return formatSet.push(format);
+            return formatSet.push(format);
 
-                });
+        });
 
-                handleStatusChange(formatSet);
-            }).catch(() => rendElement({rst: false, load: false, error: true}))
+        handleStatusChange(formatSet);
 
 
-        return function cleanup() {
-            abortController.abort();
-        };
-    }, [props.code, props.crd.set_code]);
+    }, [props.code, props.crd.set_code, props.formats]);
 
     let formats = rst.map((fm, idx) =>
         <div key={idx} className={"format"}>
@@ -105,7 +94,7 @@ function CardInfo(props) {
             <h1>{props.crd.is_unique && "◆ "}{props.crd.name}</h1>
             {props.crd.health &&
             <h2><FontAwesomeIcon icon={faHeart} size={"lg"} style={{color: "red"}}/> {props.crd.health}</h2>}
-            {props.crd.cost!==null &&
+            {props.crd.cost !== null &&
             <h2 className={"cost"}><span className='icon icon-resource '></span> {props.crd.cost} </h2>}
             <h2>{props.crd.points && "Points:"}{props.crd.points}</h2>
             <h2>{props.crd.type_name}</h2>
@@ -170,7 +159,7 @@ function CardInfo(props) {
 
                     <div className={"color"} style={{
                         backgroundColor: props.crd.faction_code,
-                        color: (props.crd.faction_code==='blue'?'white':'black')
+                        color: (props.crd.faction_code === 'blue' ? 'white' : 'black')
                     }}>
                         {props.crd.faction_code.toUpperCase()}
                     </div>
@@ -187,4 +176,10 @@ function CardInfo(props) {
     )
 }
 
-export default CardInfo
+const mapStateToProps = (state) => {
+    return {
+        formats: state.formats
+    }
+};
+
+export default connect(mapStateToProps)(CardInfo);

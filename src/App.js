@@ -24,53 +24,54 @@ function App(props) {
     const [show, updateShow] = React.useState(false);
     const [seconds, setSeconds] = React.useState(0);
     const [pad, setPad] = React.useState(60);
-    // const [load, setLoad] =React.useState("load");
+    const [loadCard, setLoadCards] = React.useState("load");
+    const [loadFormat, setLoadFormat] = React.useState("load");
+    const [loadSet, setLoadSet] = React.useState("load");
+    const [load, setLoad] =React.useState("load");
 
 
     React.useEffect(() => {
         localStorage.setItem('localStyle', JSON.stringify(props.style));
-        // let loadCards="load";
-        // let loadFormats="load";
-        // let loadSets="load";
-        //
-        // fetch("https://swdestinydb.com/api/public/cards/")
-        //     .then(response => {
-        //         return response.json();
-        //     })
-        //     .then((data) => {
-        //         loadCards="loaded";
-        //         props.setCards(data);
-        //     }).catch(function () {
-        //     loadCards="error";
-        // });
-        //
-        // fetch("https://swdestinydb.com/api/public/formats/")
-        //     .then(response => {
-        //         return response.json();
-        //     })
-        //     .then((data) => {
-        //         loadFormats="loaded";
-        //         props.setFormats(data);
-        //     }).catch(function () {
-        //     loadCards="error";
-        // });
-        //
-        // fetch("https://swdestinydb.com/api/public/sets/")
-        //     .then(response => {
-        //         return response.json();
-        //     })
-        //     .then((data) => {
-        //         loadSets="loaded";
-        //         props.setSets(data);
-        //     }).catch(function () {
-        //     loadCards="error";
-        // });
-        //
-        // if(loadCards==="loaded"&&loadFormats==="loaded"&&loadSets==="loaded"){
-        //     setLoad("loaded")
-        // }else if(loadCards==="error"||loadFormats==="error"||loadSets==="error"){
-        //     setLoad("error");
-        // }
+        if(load==="load"){
+            fetch("https://swdestinydb.com/api/public/cards/")
+                .then(response => {
+                    return response.json();
+                })
+                .then((data) => {
+                    setLoadCards("loaded");
+                    props.setCards(data);
+                }).catch(function () {
+                setLoadCards("error");
+            });
+            fetch("https://swdestinydb.com/api/public/formats/")
+                .then(response => {
+                    return response.json();
+                })
+                .then((data) => {
+                    setLoadFormat("loaded");
+                    props.setFormats(data);
+                }).catch(function () {
+                setLoadFormat("error");
+            });
+            //
+            fetch("https://swdestinydb.com/api/public/sets/")
+                .then(response => {
+                    return response.json();
+                })
+                .then((data) => {
+                    setLoadSet("loaded");
+                    props.setSets(data);
+                }).catch(function () {
+                setLoadSet("error");
+            });
+        }
+
+
+        if(loadCard==="loaded"&&loadFormat==="loaded"&&loadSet==="loaded"){
+            setLoad("loaded")
+        }else if(loadCard==="error"||loadFormat==="error"||loadSet==="error"){
+            setLoad("error");
+        }
 
         let check = false;
 
@@ -88,16 +89,16 @@ function App(props) {
             setSeconds(seconds => seconds + 1);
         }, 500);
 
-        // if(load==="loaded"){
+        if(load==="loaded"){
             setPad(document.querySelector(".sortNav").getBoundingClientRect().height);
 
             document.documentElement.style.backgroundColor = props.style.body;
-        // }
+        }
 
 
         return () => clearInterval(interval);
 
-    }, [props.style, props.sorted, seconds]);
+    }, [props.style, props.sorted, seconds, loadCard, loadFormat, loadSet, load, props]);
 
     let appStyle = {
         backgroundColor: props.style.body
@@ -112,18 +113,9 @@ function App(props) {
     return (
 
         <div className="App" style={appStyle}>
-            {/*{load==="loaded"&&<span><Nav/> <SortNav/> <Options/> <StyleOptions/> <div className={"mainWrapper"} style={wrapStyle}><Switch><Route path="/" component={List}/></Switch></div><Route path={"/:id"} component={CardPage}/></span>}*/}
-            {/*{load==="load"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.style.bodyText}}/></div>}*/}
-            <Nav/>
-            <SortNav/>
-            <Options/>
-            <StyleOptions/>
-            <div className={"mainWrapper"} style={wrapStyle}>
-                <Switch>
-                    <Route path="/" component={List}/>
-                </Switch>
-            </div>
-            <Route path={"/:id"} component={CardPage}/>
+            {load==="loaded"&&<span><Nav/> <SortNav/> <Options/> <StyleOptions/> <div className={"mainWrapper"} style={wrapStyle}><Switch><Route path="/" component={List}/></Switch></div><Route path={"/:id"} component={CardPage}/></span>}
+            {load==="load"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.style.bodyText}}/></div>}
+            {load==="error"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faExclamationCircle} spin size={"lg"} style={{color:props.style.bodyText}}/><h1>Error Loading Card API. Try again later</h1></div>}
         </div>
     );
 }

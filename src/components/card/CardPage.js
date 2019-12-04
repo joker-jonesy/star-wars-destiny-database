@@ -22,8 +22,6 @@ function CardPage(props) {
 
     React.useEffect(() => {
 
-            const abortController = new AbortController();
-            const signal = abortController.signal;
 
             function handleStatusChange(status) {
                 rendElement({
@@ -35,32 +33,17 @@ function CardPage(props) {
             }
 
 
-            fetch("https://swdestinydb.com/api/public/cards/", {signal: signal})
-                .then(response => {
-                    return response.json();
-                })
-                .then((data) => {
+            let cardMain = props.cards.filter(crd => {
+                return props.match.params.id === crd.code;
+            });
 
-                    let cardMain = data.filter(crd => {
-                        return props.match.params.id === crd.code;
-                    });
+            handleStatusChange(cardMain[0]);
 
-                    handleStatusChange(cardMain[0]);
-                }).catch(() => rendElement({
-                crd: false,
-                load: false,
-                error: true
-            }));
-
-
-            return function cleanup() {
-                abortController.abort();
-            };
 
         }
 
         ,
-        [props.match.params.id]
+        [props.match.params.id, props.cards]
     )
     ;
 
@@ -88,7 +71,7 @@ function CardPage(props) {
 const mapStateToProps = (state) => {
     return {
         style: state.style,
-        cards:state.cards
+        cards: state.cards
     }
 };
 
