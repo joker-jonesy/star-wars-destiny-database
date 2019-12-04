@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c31bce5139b7c09b3718375a55ab68ab",
+    "revision": "406be7782aa4cbf33456096f38044835",
     "url": "/star-wars-destiny-database/index.html"
   },
   {
-    "revision": "e0d78b3466a916cdb9a9",
-    "url": "/star-wars-destiny-database/static/css/main.82f59d08.chunk.css"
+    "revision": "9543845b2e9efdb840a0",
+    "url": "/star-wars-destiny-database/static/css/main.19ea0047.chunk.css"
   },
   {
-    "revision": "d649e2c77864cad86938",
-    "url": "/star-wars-destiny-database/static/js/2.79e4123b.chunk.js"
+    "revision": "dbd25eeffa93151afc10",
+    "url": "/star-wars-destiny-database/static/js/2.d1cc581d.chunk.js"
   },
   {
-    "revision": "e0d78b3466a916cdb9a9",
-    "url": "/star-wars-destiny-database/static/js/main.73ca46ac.chunk.js"
+    "revision": "9543845b2e9efdb840a0",
+    "url": "/star-wars-destiny-database/static/js/main.505f871b.chunk.js"
   },
   {
     "revision": "f6f415a01d1d9c3b23ad",
