@@ -747,6 +747,18 @@ html {
 .cardPageWrapper {
   width: 100%;
 }
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+}
+.errorBox .fa-layers {
+  width: 100%;
+  height: 150px;
+}
 .cardFlop img {
   transition: all 0.2s ease-in;
 }
