@@ -491,6 +491,13 @@ html {
   justify-content: center;
   align-items: center;
   z-index: 101;
+  transition: 0.15s;
+}
+.cardPageWrapper .close:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+.cardPageWrapper .close:active {
+  opacity: 0.5;
 }
 .cardPageWrapper .card {
   color: white;
@@ -732,32 +739,24 @@ html {
 }
 .card .cardWrapper img {
   display: block;
+  border-radius: 14px;
 }
 .card h1 {
   margin-bottom: 8px;
 }
-@keyframes rotate-a {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  25% {
-    transform: rotateZ(-5deg);
-  }
-  75% {
-    transform: rotateZ(5deg);
-  }
-  100% {
-    transform: rotateZ(0deg);
-  }
+.cardPageWrapper {
+  width: 100%;
 }
-.cardFlop:hover img {
-  animation: rotate-a 2s infinite ease-in-out forwards;
-  -webkit-animation: rotate-a 2s infinite ease-in-out forwards;
+.cardFlop img {
+  transition: all 0.2s ease-in;
+}
+.cardFlop img:hover {
+  box-shadow: 0px 0px 15px;
+  transition: all 0.2s ease-in;
 }
 @media screen and (max-device-width: 600px) {
-  .cardFlop:hover img {
-    animation: none;
-    -webkit-animation: none;
+  .cardFlop img:hover {
+    box-shadow: 0px 0px 0px;
   }
 }
 .button {

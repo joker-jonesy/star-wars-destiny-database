@@ -61,11 +61,15 @@ function Card(props) {
         updateLoading(false)
     };
 
+    let imgStyle = {
+        color:props.style.bodyText
+    }
+
     return (
         <div className={"card"}>
-            {props.bod&&<h1 style={{color:props.style.bodyText}}>{props.name}</h1>}
+            {props.bod&&rend.error?<h1 style={{color:props.style.bodyText}}>{props.name}</h1>:null}
             <div className={"cardWrapper"}>
-                {rend.img && <img alt={props.name} onLoad={handleImageLoad} onError={handleImageError} src={props.imagesrc}/>}
+                {rend.img && <img alt={props.name} onLoad={handleImageLoad} onError={handleImageError} src={props.imagesrc} style={imgStyle}/>}
                 <div>
                     {rend.load&&<FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.loadColor}}/>}
                     {rend.error&&<FontAwesomeIcon icon={faExclamationCircle} style={{color:"red"}} size={"6x"}/>}
