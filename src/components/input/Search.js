@@ -21,11 +21,13 @@ function Search(props) {
         color: props.style.nav
     };
 
+    let close = (props.name!==""?<FontAwesomeIcon style={sg} icon={faTimes} onClick={() => props.setName("")}/>:null);
+
     return (
         <div className={"searchContainer"}>
             <input style={sty} placeholder={"Search Card by Name..."} value={props.name} onChange={handleChange}
                    className={"search "+props.style.name}/>
-            <FontAwesomeIcon style={sg} icon={faTimes} onClick={() => props.setName("")}/>
+            {close}
         </div>
 
     );

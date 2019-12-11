@@ -1,8 +1,10 @@
 import React from 'react';
 import './less/style.css';
 import List from './components/main/List';
-import CardPage from './components/card/CardPage'
+import CardPage from './components/card/CardPage';
+import About from './components/main/About';
 import Nav from './components/nav/Navigation';
+import Footer from './components/footer/Footer';
 import Options from './components/nav/options';
 import SortNav from './components/nav/SortNav'
 import StyleOptions from './components/nav/StyleOptions';
@@ -113,7 +115,7 @@ function App(props) {
     return (
 
         <div className="App" style={appStyle}>
-            {load==="loaded"&&<span><Nav/> <SortNav/> <Options/> <StyleOptions/> <div className={"mainWrapper"} style={wrapStyle}><Switch><Route path="/" component={List}/></Switch></div><Route path={"/:id"} component={CardPage}/></span>}
+            {load==="loaded"&&<span><Nav/> <SortNav/> <Options/> <StyleOptions/> <div className={"mainWrapper"} style={wrapStyle}><Switch><Route path="/" component={List}/></Switch><Footer/></div><Route path={"/card/:id"} component={CardPage}/><Route exact path={"/about"} component={About}/></span>}
             {load==="load"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.style.bodyText}}/></div>}
             {load==="error"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faExclamationCircle} spin size={"lg"} style={{color:props.style.bodyText}}/><h1>Error Loading Card API. Try again later</h1></div>}
         </div>

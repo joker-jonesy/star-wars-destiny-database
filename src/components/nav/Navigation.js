@@ -18,6 +18,7 @@ function Nav(props) {
         <nav style={style}>
             <div className={"logo"} >
                 {(props.style.name!==undefined)?<img alt={"logo"} src={require("./../../assets/"+props.style.name.toLowerCase()+"logo.svg")} onClick={()=>props.clearOptions()}/>:<img alt={"logo"} src={require("./../../assets/convergencelogo.svg")} onClick={()=>props.clearOptions()}/>}
+                <h5>Database</h5>
             </div>
             <Search/>
             <div className={"ham"} >
