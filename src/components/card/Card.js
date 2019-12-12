@@ -61,9 +61,18 @@ function Card(props) {
         updateLoading(false)
     };
 
-    let imgStyle = {
-        color:props.style.bodyText
+    let imgStyle;
+
+    if(props.style===""){
+        imgStyle = {
+            color:"black"
+        };
+    }else{
+        imgStyle = {
+            color:props.style.bodyText
+        };
     }
+
 
     return (
         <div className={"card"}>
