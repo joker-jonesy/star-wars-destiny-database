@@ -2,7 +2,7 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSpinner, faExclamationCircle, faHeart} from '@fortawesome/free-solid-svg-icons';
 import Side from './Side';
-import {connect} from 'react-redux';
+import { useSelector } from "react-redux";
 
 
 function CardInfo(props) {
@@ -29,6 +29,8 @@ function CardInfo(props) {
         }
     ]);
 
+    const stFormats =useSelector(state=>state.formats);
+
     const [rend, rendElement] = React.useState({
         rst: false,
         load: true,
@@ -46,7 +48,7 @@ function CardInfo(props) {
 
         let formatSet = [];
 
-        props.formats.map((fm) => {
+        stFormats.map((fm) => {
 
             let format = {
                 name: fm.name,
@@ -77,7 +79,7 @@ function CardInfo(props) {
         handleStatusChange(formatSet);
 
 
-    }, [props.code, props.crd.set_code, props.formats]);
+    }, [props.code, props.crd.set_code, stFormats]);
 
     let formats = rst.map((fm, idx) =>
         <div key={idx} className={"format"}>
@@ -176,10 +178,6 @@ function CardInfo(props) {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        formats: state.formats
-    }
-};
 
-export default connect(mapStateToProps)(CardInfo);
+
+export default CardInfo;

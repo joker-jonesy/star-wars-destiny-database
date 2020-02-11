@@ -1,6 +1,7 @@
 import React from 'react';
 import {setStyles} from "../../redux/actions/setActions";
 import {connect} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function StyleOption(props) {
 

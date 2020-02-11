@@ -2,6 +2,7 @@ import React from 'react';
 import StyleOption from './StyleOption';
 import {connect} from "react-redux";
 import {Styles} from './../../data/Style';
+import { useSelector } from "react-redux";
 
 function StyleOptions(props) {
 

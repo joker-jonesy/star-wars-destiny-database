@@ -1,6 +1,7 @@
 import React from 'react';
 import SortTag from './SortTag';
 import {connect} from 'react-redux';
+import { useSelector } from "react-redux";
 
 function SortNav(props) {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { useSelector } from "react-redux";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome/index';
 import {faTimes} from '@fortawesome/free-solid-svg-icons/index';
 import {
@@ -10,9 +10,11 @@ import IMG from '../../assets/schoolImage.jpeg';
 
 function About(props){
 
+    const style =useSelector(state=>state.style);
+
     return(
         <Link className={"about"} to={"/"}>
-            <div className={"close"} style={{backgroundColor: props.style.navText, color: props.style.nav}}>
+            <div className={"close"} style={{backgroundColor: style.navText, color: style.nav}}>
                 <FontAwesomeIcon icon={faTimes} size={"4x"}/>
             </div>
             <div className={"aboutWrp"}>
@@ -26,10 +28,4 @@ function About(props){
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        style: state.style
-    }
-};
-
-export default connect(mapStateToProps)(About)
+export default About;

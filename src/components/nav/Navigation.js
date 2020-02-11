@@ -1,6 +1,7 @@
 import React from 'react';
 import {toggleOptions, clearOptions, toggleStyles} from "../../redux/actions/setActions";
 import {connect} from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import Search from '../input/Search';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch, faTimes, faPalette} from '@fortawesome/free-solid-svg-icons';

@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronUp, faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import OptionItem from './OptionItem';
+import {useSelector } from "react-redux";
 import {connect} from 'react-redux';
 
 function Option (props){

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSpinner, faExclamationCircle, faCircle} from '@fortawesome/free-solid-svg-icons';
-import {connect} from "react-redux";
+import { useSelector } from "react-redux";
 function Card(props) {
 
     const [load, updateLoading] = React.useState("loading");
@@ -11,7 +11,7 @@ function Card(props) {
         error:false
     });
     const [seconds, setSeconds] = React.useState(0);
-
+    const style =useSelector(state=>state.style);
 
     React.useEffect(() => {
         let interval = null;
@@ -63,25 +63,25 @@ function Card(props) {
 
     let imgStyle;
 
-    if(props.style===""){
+    if(style===""){
         imgStyle = {
             color:"black"
         };
     }else{
         imgStyle = {
-            color:props.style.bodyText
+            color:style.bodyText
         };
     }
 
 
     return (
         <div className={"card"}>
-            {props.bod&&rend.error?<h1 style={{color:props.style.bodyText}}>{props.name}</h1>:null}
+            {props.bod&&rend.error?<h1 style={{color:style.bodyText}}>{props.name}</h1>:null}
             <div className={"cardWrapper"}>
                 {rend.img && <img alt={props.name} onLoad={handleImageLoad} onError={handleImageError} src={props.imagesrc} style={imgStyle}/>}
 
                     {rend.load&&<FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.loadColor}}/>}
-                    {rend.error&&<div className={"errorBox"}><h4 style={{color:(props.bod?props.style.bodyText:'white')}}>Error Loading Image</h4><div className="fa-layers fa-fw"><FontAwesomeIcon style={{color:"white"}} icon={faCircle} size={"6x"} /><FontAwesomeIcon icon={faExclamationCircle} style={{color:"red"}} size={"6x"}/></div></div>}
+                    {rend.error&&<div className={"errorBox"}><h4 style={{color:(props.bod?style.bodyText:'white')}}>Error Loading Image</h4><div className="fa-layers fa-fw"><FontAwesomeIcon style={{color:"white"}} icon={faCircle} size={"6x"} /><FontAwesomeIcon icon={faExclamationCircle} style={{color:"red"}} size={"6x"}/></div></div>}
 
             </div>
 
@@ -90,10 +90,5 @@ function Card(props) {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        style:state.style
-    }
-};
 
-export default connect(mapStateToProps)(Card);
+export default Card;

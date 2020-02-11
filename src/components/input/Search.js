@@ -1,51 +1,47 @@
 import React from 'react';
 import {setName} from "../../redux/actions/setActions";
-import {connect} from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
 function Search(props) {
 
+
+    const style =useSelector(state=>state.style);
+
+    const name =useSelector(state=>state.name);
+    const dispatch = useDispatch();
+
     const handleChange = event => {
-        props.setName(event.target.value);
+        dispatch(setName(event.target.value));
 
     };
 
+
     let sty = {
-        backgroundColor: props.style.navText,
-        color: props.style.nav,
+        backgroundColor: style.navText,
+        color: style.nav,
 
     };
 
     let sg = {
-        color: props.style.nav
+        color: style.nav
     };
 
-    let close = (props.name!==""?<FontAwesomeIcon style={sg} icon={faTimes} onClick={() => props.setName("")}/>:null);
+    let close = (name!==""?<FontAwesomeIcon style={sg} icon={faTimes} onClick={()=>dispatch(setName(""))}/>:null);
 
     return (
         <div className={"searchContainer"}>
-            <input style={sty} placeholder={"Search Card by Name..."} value={props.name} onChange={handleChange}
-                   className={"search "+props.style.name}/>
+            <input style={sty} placeholder={"Search Card by Name..."} value={name} onChange={handleChange}
+                   className={"search "+style.name}/>
             {close}
         </div>
 
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        name: state.name,
-        style: state.style
-    }
-};
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setName: (name) => {
-            dispatch(setName(name))
-        }
-    }
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+
+
+export default Search;

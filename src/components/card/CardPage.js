@@ -3,10 +3,10 @@ import {
     Link
 } from "react-router-dom";
 import Card from './Card';
-import {connect} from 'react-redux';
 import CardInfo from './CardInfo';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSpinner, faExclamationCircle, faTimes} from '@fortawesome/free-solid-svg-icons';
+import {useSelector} from "react-redux";
 
 
 function CardPage(props) {
@@ -19,6 +19,8 @@ function CardPage(props) {
         error: false
     });
 
+    const style =useSelector(state=>state.style);
+    const cards =useSelector(state=>state.cards);
 
     React.useEffect(() => {
 
@@ -33,7 +35,7 @@ function CardPage(props) {
             }
 
 
-            let cardMain = props.cards.filter(crd => {
+            let cardMain = cards.filter(crd => {
                 return props.match.params.id === crd.code;
             });
 
@@ -43,7 +45,7 @@ function CardPage(props) {
         }
 
         ,
-        [props.match.params.id, props.cards]
+        [props.match.params.id, cards]
     )
     ;
 
@@ -53,11 +55,11 @@ function CardPage(props) {
     return (
         <Link className={props.match.params.id ? "cardPageWrapper" : undefined} to={"/"}>
 
-            <div className={"close"} style={{backgroundColor: props.style.navText, color: props.style.nav}}>
+            <div className={"close"} style={{backgroundColor: style.navText, color: props.style.nav}}>
                 <FontAwesomeIcon icon={faTimes} size={"4x"}/>
             </div>
 
-            {rend.load && <FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color: props.loadColor}}/>}
+            {rend.load && <FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color: style.loadColor}}/>}
             {rend.error && <FontAwesomeIcon icon={faExclamationCircle} style={{color: "red"}} size={"6x"}/>}
 
             {rend.crd &&
@@ -68,11 +70,4 @@ function CardPage(props) {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        style: state.style,
-        cards: state.cards
-    }
-};
-
-export default connect(mapStateToProps)(CardPage);
+export default CardPage;

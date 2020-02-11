@@ -1,6 +1,7 @@
 import React from 'react';
 import {setSort} from "../../redux/actions/setActions";
 import {connect} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCheckSquare, faSquare} from '@fortawesome/free-solid-svg-icons';
 

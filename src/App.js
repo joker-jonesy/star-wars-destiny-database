@@ -11,7 +11,7 @@ import StyleOptions from './components/nav/StyleOptions';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSpinner, faExclamationCircle} from '@fortawesome/free-solid-svg-icons';
 
-import {connect} from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import {setCards, setFormats, setSets} from "./redux/actions/setActions";
 
 import {
@@ -21,7 +21,7 @@ import {
 
 
 
-function App(props) {
+function App() {
 
     const [show, updateShow] = React.useState(false);
     const [seconds, setSeconds] = React.useState(0);
@@ -31,9 +31,13 @@ function App(props) {
     const [loadSet, setLoadSet] = React.useState("load");
     const [load, setLoad] =React.useState("load");
 
+    const style =useSelector(state=>state.style);
+    const sorted =useSelector(state=>state.sorted);
+    const dispatch = useDispatch();
+
 
     React.useEffect(() => {
-        localStorage.setItem('localStyle', JSON.stringify(props.style));
+        localStorage.setItem('localStyle', JSON.stringify(style));
         if(load==="load"){
             fetch("https://swdestinydb.com/api/public/cards/")
                 .then(response => {
@@ -41,7 +45,7 @@ function App(props) {
                 })
                 .then((data) => {
                     setLoadCards("loaded");
-                    props.setCards(data);
+                    dispatch(setCards(data));
                 }).catch(function () {
                 setLoadCards("error");
             });
@@ -51,7 +55,7 @@ function App(props) {
                 })
                 .then((data) => {
                     setLoadFormat("loaded");
-                    props.setFormats(data);
+                    dispatch(setFormats(data));
                 }).catch(function () {
                 setLoadFormat("error");
             });
@@ -62,7 +66,7 @@ function App(props) {
                 })
                 .then((data) => {
                     setLoadSet("loaded");
-                    props.setSets(data);
+                    dispatch(setSets(data));
                 }).catch(function () {
                 setLoadSet("error");
             });
@@ -77,8 +81,8 @@ function App(props) {
 
         let check = false;
 
-        for (let p in props.sorted) {
-            if (props.sorted[p].toggle) {
+        for (let p in sorted) {
+            if (sorted[p].toggle) {
                 check = true;
             }
         }
@@ -94,54 +98,36 @@ function App(props) {
         if(load==="loaded"){
             setPad(document.querySelector(".sortNav").getBoundingClientRect().height);
 
-            document.documentElement.style.backgroundColor = props.style.body;
+            document.documentElement.style.backgroundColor = style.body;
         }
 
 
         return () => clearInterval(interval);
 
-    }, [props.style, props.sorted, seconds, loadCard, loadFormat, loadSet, load, props]);
+    }, [style, sorted, seconds, loadCard, loadFormat, loadSet, load, dispatch]);
 
     let appStyle = {
-        backgroundColor: props.style.body
+        backgroundColor: style.body
     };
 
     let wrapStyle = {
-        color: props.style.bodyText,
-        backgroundColor: props.style.body,
+        color: style.bodyText,
+        backgroundColor: style.body,
         paddingTop: (show ? "" + pad + "px" : "0")
     };
 
     return (
 
         <div className="App" style={appStyle}>
-            {load==="loaded"&&<span><Nav/> <SortNav/> <Options/> <StyleOptions/> <div className={"mainWrapper"} style={wrapStyle}><Switch><Route path="/" component={List}/></Switch><Footer/></div><Route path={"/card/:id"} component={CardPage}/><Route exact path={"/about"} component={About}/></span>}
-            {load==="load"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:props.style.bodyText}}/></div>}
-            {load==="error"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faExclamationCircle} spin size={"lg"} style={{color:props.style.bodyText}}/><h1>Error Loading Card API. Try again later</h1></div>}
+            {load==="loaded"&&<span><Nav/> <SortNav/> <Options/> <StyleOptions/> <div className={"mainWrapper"} style={wrapStyle}><Switch><Route path="/" component={List}/></Switch></div><Route path={"/card/:id"} component={CardPage}/><Route exact path={"/about"} component={About}/></span>}
+            {load==="load"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faSpinner} spin size={"lg"} style={{color:style.bodyText}}/></div>}
+            {load==="error"&&<div style={{height:"100%"}}><FontAwesomeIcon icon={faExclamationCircle} spin size={"lg"} style={{color:style.bodyText}}/><h1>Error Loading Card API. Try again later</h1></div>}
+            {load==="loaded"&&<Footer/>}
         </div>
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        style: state.style,
-        sorted: state.sorted
-    }
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setCards: (crds) => {
-            dispatch(setCards(crds))
-        },
-        setFormats: (fmts) => {
-            dispatch(setFormats(fmts))
-        },
-        setSets: (sts) => {
-            dispatch(setSets(sts))
-        },
-    }
-};
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+export default App;

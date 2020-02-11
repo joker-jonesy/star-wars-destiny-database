@@ -1,6 +1,7 @@
 import React from 'react';
 import {clearOptions} from "../../redux/actions/setActions";
 import {connect} from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import Option from './Option';
 import Button from '../input/Button';
 

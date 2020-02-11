@@ -4,6 +4,7 @@ import {faHeart, faCircle, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 import {connect} from 'react-redux';
 import {setSort} from "../../redux/actions/setActions";
+import { useDispatch, useSelector } from "react-redux";
 
 function SortTag(props){
     const [hover, setHover] = React.useState(false);
