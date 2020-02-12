@@ -1,32 +1,36 @@
 import React from 'react';
 import {clearOptions} from "../../redux/actions/setActions";
-import {connect} from 'react-redux';
 import { useDispatch, useSelector } from "react-redux";
 import Option from './Option';
 import Button from '../input/Button';
 
 function Options(props){
 
+    const style =useSelector(state=>state.style);
+    const Options =useSelector(state=>state.options);
+    const sets =useSelector(state=>state.sets);
+    const dispatch = useDispatch();
+
     let show;
 
-    if(props.options){
+    if(Options){
         show={
             "right":"0",
-            backgroundColor:props.style.navText,
-            color:props.style.nav
+            backgroundColor:style.navText,
+            color:style.nav
         }
     }else{
         show={
             "right":"-100%",
-            backgroundColor:props.style.navText,
-            color:props.style.nav
+            backgroundColor:style.navText,
+            color:style.nav
         }
     }
 
     let Sets = [];
 
-    for(let i=0; i<props.sets.length; i++){
-        Sets.push(props.sets[i].name)
+    for(let i=0; i<sets.length; i++){
+        Sets.push(sets[i].name)
     }
 
     let Sort = [
@@ -107,7 +111,7 @@ function Options(props){
 
     return (
         <div className={"options"} style={show}>
-            <div className={"top"}><h1 style={{color:props.style.nav}}>Sort Cards </h1><Button handleClick={() => props.clearOptions()} text={"Clear Search Query"}/></div>
+            <div className={"top"}><h1 style={{color:style.nav}}>Sort Cards </h1><Button handleClick={() => dispatch(clearOptions())} text={"Clear Search Query"}/></div>
             <div className={"wrapper"}>
                 {options}
             </div>
@@ -116,23 +120,10 @@ function Options(props){
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        options:state.options,
-        style:state.style,
-        sets:state.sets
-    }
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-
-        clearOptions:()=>{
-            dispatch(clearOptions())
-        }
-    }
-};
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Options);
+
+
+
+export default Options;

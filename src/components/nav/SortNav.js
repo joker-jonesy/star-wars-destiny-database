@@ -1,12 +1,13 @@
 import React from 'react';
 import SortTag from './SortTag';
-import {connect} from 'react-redux';
 import { useSelector } from "react-redux";
 
 function SortNav(props) {
 
     const [show, updateShow] = React.useState(false);
     const [tags, updateTags] = React.useState([]);
+    const style =useSelector(state=>state.style);
+    const sorted =useSelector(state=>state.sorted);
 
 
     React.useEffect(() => {
@@ -14,23 +15,23 @@ function SortNav(props) {
         let tagArray = [];
 
 
-        for (let p in props.sorted) {
+        for (let p in sorted) {
 
-            if (props.sorted[p].toggle) {
+            if (sorted[p].toggle) {
                 check = true;
-                for(let x=0; x<props.sorted[p].val.length; x++){
+                for(let x=0; x<sorted[p].val.length; x++){
                     let obj = {
                         prop:p,
                         val:""
                     };
                     if(p==='health'){
-                        obj.val=props.sorted[p].val[x]+"H";
+                        obj.val=sorted[p].val[x]+"H";
                     }else if(p==='points'){
-                        obj.val=props.sorted[p].val[x]+"P";
+                        obj.val=sorted[p].val[x]+"P";
                     }else if(p==='cost'){
-                        obj.val=props.sorted[p].val[x]+"C";
+                        obj.val=sorted[p].val[x]+"C";
                     }else{
-                        obj.val=props.sorted[p].val[x];
+                        obj.val=sorted[p].val[x];
                     }
                     tagArray.push(obj)
                 }
@@ -43,19 +44,19 @@ function SortNav(props) {
         updateShow(check);
         updateTags(tagArray);
     },
-[props.sorted]);
+[sorted]);
 
 let shower;
 
 if (show) {
     shower = {
         top: '80px',
-        backgroundColor: props.style.bodyText
+        backgroundColor: style.bodyText
     }
 } else {
     shower = {
         top: '-80px',
-        backgroundColor: props.style.bodyText
+        backgroundColor: style.bodyText
     }
 }
 
@@ -71,11 +72,6 @@ return (
 )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        sorted: state.sorted,
-        style: state.style
-    }
-};
 
-export default connect(mapStateToProps)(SortNav);
+
+export default SortNav;

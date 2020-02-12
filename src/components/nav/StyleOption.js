@@ -1,11 +1,13 @@
 import React from 'react';
 import {setStyles} from "../../redux/actions/setActions";
-import {connect} from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
 
 function StyleOption(props) {
 
     const [hover, setHover] = React.useState(false)
+    const style =useSelector(state=>state.style);
+    const dispatch = useDispatch();
+
 
     const hoverChange = ()=>{
         setHover(!hover)
@@ -14,27 +16,27 @@ function StyleOption(props) {
     let active;
 
     if(hover){
-        if(props.style.navText===undefined){
+        if(style.navText===undefined){
             active = {
                 backgroundColor: '#343740',
                 color:'white'
             }
         }else{
             active = {
-                backgroundColor: props.style.bodyText,
-                color:props.style.navText
+                backgroundColor: style.bodyText,
+                color:style.navText
             }
         }
     }else{
-        if(props.opt.name===props.style.name){
+        if(props.opt.name===style.name){
             active={
-                backgroundColor:props.style.navText,
-                color:props.style.nav
+                backgroundColor:style.navText,
+                color:style.nav
             }
         }else{
             active={
-                backgroundColor:props.style.nav,
-                color:props.style.navText
+                backgroundColor:style.nav,
+                color:style.navText
             }
         }
     }
@@ -45,23 +47,13 @@ function StyleOption(props) {
 
     return (
 
-        <div className={"item"} onMouseEnter={hoverChange} onMouseLeave={hoverChange} style={active} onClick={() => props.setStyles(props.opt)}>{props.opt.name}</div>
+        <div className={"item"} onMouseEnter={hoverChange} onMouseLeave={hoverChange} style={active} onClick={() => dispatch(setStyles(props.opt))}>{props.opt.name}</div>
 
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        style: state.style
-    }
-};
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setStyles: (style) => {
-            dispatch(setStyles(style))
-        }
-    }
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(StyleOption);
+
+
+export default StyleOption;

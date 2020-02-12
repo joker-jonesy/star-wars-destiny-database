@@ -1,34 +1,41 @@
 import React from 'react';
 import {toggleOptions, clearOptions, toggleStyles} from "../../redux/actions/setActions";
-import {connect} from 'react-redux';
 import { useDispatch, useSelector } from "react-redux";
 import Search from '../input/Search';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch, faTimes, faPalette} from '@fortawesome/free-solid-svg-icons';
 
-function Nav(props) {
+function Nav() {
 
-    let style= {
-        color:props.style.navText,
-        backgroundColor:props.style.nav
+    const options = useSelector(state=>state.options);
+    const styles = useSelector(state=>state.styles);
+    const style = useSelector(state=>state.style);
+
+    const dispatch = useDispatch();
+
+    let styler= {
+        color:style.navText,
+        backgroundColor:style.nav
     };
+
+
 
     return (
 
 
-        <nav style={style}>
+        <nav style={styler}>
             <div className={"logo"} >
-                {(props.style.name!==undefined)?<img alt={"logo"} src={require("./../../assets/"+props.style.name.toLowerCase()+"logo.svg")} onClick={()=>props.clearOptions()}/>:<img alt={"logo"} src={require("./../../assets/convergencelogo.svg")} onClick={()=>props.clearOptions()}/>}
+                {(style.name!==undefined)?<img alt={"logo"} src={require("./../../assets/"+style.name.toLowerCase()+"logo.svg")} onClick={()=>dispatch(clearOptions())}/>:<img alt={"logo"} src={require("./../../assets/convergencelogo.svg")} onClick={()=>dispatch(clearOptions())}/>}
                 <h5>Database</h5>
             </div>
             <Search/>
             <div className={"ham"} >
 
-                {!props.styles && <FontAwesomeIcon icon={faPalette} size="2x" onClick={() => props.toggleStyles()}/>}
-                {props.styles && <FontAwesomeIcon icon={faTimes} size="2x" onClick={() => props.toggleStyles()}/>}
+                {!styles && <FontAwesomeIcon icon={faPalette} size="2x" onClick={() => dispatch(toggleStyles())}/>}
+                {styles && <FontAwesomeIcon icon={faTimes} size="2x" onClick={() => dispatch(toggleStyles())}/>}
 
-                {!props.options && <FontAwesomeIcon icon={faSearch} size="2x" onClick={() => props.toggleOptions()}/>}
-                {props.options && <FontAwesomeIcon icon={faTimes} size="2x" onClick={() => props.toggleOptions()}/>}
+                {!options && <FontAwesomeIcon icon={faSearch} size="2x" onClick={() => dispatch(toggleOptions())}/>}
+                {options && <FontAwesomeIcon icon={faTimes} size="2x" onClick={() => dispatch(toggleOptions())}/>}
 
             </div>
 
@@ -39,26 +46,6 @@ function Nav(props) {
 }
 
 
-const mapStateToProps = (state) => {
-    return {
-        options: state.options,
-        styles:state.styles,
-        style:state.style
-    }
-};
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        toggleOptions: () => {
-            dispatch(toggleOptions())
-        },
-        clearOptions:()=>{
-            dispatch(clearOptions())
-        },
-        toggleStyles: ()=>{
-            dispatch(toggleStyles())
-        }
-    }
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Nav);
+export default Nav;

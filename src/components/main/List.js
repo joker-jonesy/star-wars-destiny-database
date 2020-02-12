@@ -11,7 +11,6 @@ function List() {
     const [load] = React.useState(true);
     const [error] = React.useState(false);
 
-    const style =useSelector(state=>state.style);
     const itemLimit =useSelector(state=>state.itemLimit);
     const sorted =useSelector(state=>state.sorted);
     const name =useSelector(state=>state.name);

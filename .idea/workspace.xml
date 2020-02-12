@@ -5,14 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/CardInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/CardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/Navigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/Option.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/Option.js" afterDir="false" />
@@ -22,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/nav/StyleOption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/StyleOption.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/StyleOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/StyleOptions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +112,8 @@
       <workItem from="1576108976302" duration="898000" />
       <workItem from="1579017892484" duration="2163000" />
       <workItem from="1580140077858" duration="104000" />
-      <workItem from="1581455196273" duration="4582000" />
+      <workItem from="1581455196273" duration="4660000" />
+      <workItem from="1581521933810" duration="1578000" />
     </task>
     <servers />
   </component>

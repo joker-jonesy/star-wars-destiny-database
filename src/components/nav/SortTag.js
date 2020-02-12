@@ -1,30 +1,29 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart, faCircle, faTimes} from '@fortawesome/free-solid-svg-icons';
-
-import {connect} from 'react-redux';
 import {setSort} from "../../redux/actions/setActions";
 import { useDispatch, useSelector } from "react-redux";
 
 function SortTag(props){
     const [hover, setHover] = React.useState(false);
-
+    const style =useSelector(state=>state.style);
+    const dispatch = useDispatch();
 
     const handleSort = (prop, val) => {
-        props.setSort(prop, val)
+        dispatch(setSort(prop, val))
     };
 
-    let style;
+    let styler;
 
     if(hover){
-        style = {
-            color:props.style.body,
-            backgroundColor:props.style.nav
+        styler = {
+            color:style.body,
+            backgroundColor:style.nav
         };
     }else{
-        style = {
-            color:props.style.nav,
-            backgroundColor:props.style.body
+        styler = {
+            color:style.nav,
+            backgroundColor:style.body
         };
     }
 
@@ -83,24 +82,11 @@ function SortTag(props){
 
     return (
         <div className={"itm"} onClick={()=>handleSort(props.prp,(props.prp==="set_name"?props.val:text(props.val)))}
-            style={style} onMouseEnter={hoverChange}
+            style={styler} onMouseEnter={hoverChange}
              onMouseLeave={hoverChange}>{(props.prp==="set_name"?props.val:numberCheck(props.val))} <FontAwesomeIcon icon={faTimes}/></div>
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        sorted: state.sorted,
-        style: state.style
-    }
-};
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setSort: (prop, val) => {
-            dispatch(setSort(prop,  val))
-        }
-    }
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(SortTag);
+export default SortTag;
