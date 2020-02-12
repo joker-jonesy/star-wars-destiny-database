@@ -6,10 +6,11 @@ import { useSelector } from "react-redux";
 function StyleOptions(props) {
 
     const style =useSelector(state=>state.style);
+    const sty =useSelector(state=>state.styles);
 
     let show;
 
-    if (props.styles) {
+    if (sty) {
         show={
             "right":"0",
             backgroundColor:style.navText,
