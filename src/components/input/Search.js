@@ -14,7 +14,6 @@ function Search(props) {
 
     const handleChange = event => {
         dispatch(setName(event.target.value));
-
     };
 
 

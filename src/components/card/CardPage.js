@@ -55,7 +55,7 @@ function CardPage(props) {
     return (
         <Link className={props.match.params.id ? "cardPageWrapper" : undefined} to={"/"}>
 
-            <div className={"close"} style={{backgroundColor: style.navText, color: props.style.nav}}>
+            <div className={"close"} style={{backgroundColor: style.navText, color:style.nav}}>
                 <FontAwesomeIcon icon={faTimes} size={"4x"}/>
             </div>
 
