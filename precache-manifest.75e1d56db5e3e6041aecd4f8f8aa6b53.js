@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d5b0bcc40ec17e5bb30db360dc1939c1",
+    "revision": "233d3712bd4b9b4f228e9c3e342478db",
     "url": "/star-wars-destiny-database/index.html"
   },
   {
-    "revision": "ae76002354899fd77b16",
-    "url": "/star-wars-destiny-database/static/css/main.e8c053a6.chunk.css"
+    "revision": "61ccdc7e1a6c8b435f4c",
+    "url": "/star-wars-destiny-database/static/css/main.3bc921f1.chunk.css"
   },
   {
-    "revision": "4e4c73f2d5451e262dcd",
-    "url": "/star-wars-destiny-database/static/js/2.e56561e6.chunk.js"
+    "revision": "4536c91e680834f14952",
+    "url": "/star-wars-destiny-database/static/js/2.7c2b5274.chunk.js"
   },
   {
     "revision": "6d6c0d1371e570614ef23e12cbfed171",
-    "url": "/star-wars-destiny-database/static/js/2.e56561e6.chunk.js.LICENSE.txt"
+    "url": "/star-wars-destiny-database/static/js/2.7c2b5274.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ae76002354899fd77b16",
-    "url": "/star-wars-destiny-database/static/js/main.29b79518.chunk.js"
+    "revision": "61ccdc7e1a6c8b435f4c",
+    "url": "/star-wars-destiny-database/static/js/main.4046d6c2.chunk.js"
   },
   {
     "revision": "cc2eb67017ef93c2f15c",
