@@ -533,7 +533,8 @@ html {
 }
 .cardPageWrapper .cardInfo .formats {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   margin: 8px 0;
 }
@@ -547,6 +548,7 @@ html {
   box-sizing: border-box;
   padding: 8px;
   width: 100px;
+  margin: 8px;
 }
 .cardPageWrapper .cardInfo .formats .format .restrict {
   color: red;
