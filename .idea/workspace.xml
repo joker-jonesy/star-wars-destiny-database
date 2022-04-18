@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c786f6e1-bbd5-4088-be44-1cdc1b091e07" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,6 +65,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -163,6 +162,10 @@
       <workItem from="1636233872783" duration="792000" />
       <workItem from="1643585192147" duration="1099000" />
       <workItem from="1643670137896" duration="161000" />
+      <workItem from="1644503282233" duration="100000" />
+      <workItem from="1644980658470" duration="706000" />
+      <workItem from="1645109103588" duration="356000" />
+      <workItem from="1645375646892" duration="1035000" />
     </task>
     <servers />
   </component>
